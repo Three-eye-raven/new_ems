@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../../build/lib/libpvpcs_sofar_50kw.a  CMakeFiles/pvpcs_sofar_50kw.dir/pvpcs_sofar_50kw_data_protocol.c.o CMakeFiles/pvpcs_sofar_50kw.dir/pvpcs_sofar_50kw_external_api.c.o CMakeFiles/pvpcs_sofar_50kw.dir/pvpcs_sofar_50kw_link_api.c.o
-/usr/bin/ranlib ../../../../build/lib/libpvpcs_sofar_50kw.a

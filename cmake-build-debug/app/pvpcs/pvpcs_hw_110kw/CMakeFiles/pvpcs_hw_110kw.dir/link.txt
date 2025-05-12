@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../../build/lib/libpvpcs_hw_110kw.a  CMakeFiles/pvpcs_hw_110kw.dir/pvpcs_hw_110kw_data_protocol.c.o CMakeFiles/pvpcs_hw_110kw.dir/pvpcs_hw_110kw_external_api.c.o CMakeFiles/pvpcs_hw_110kw.dir/pvpcs_hw_110kw_link_api.c.o
-/usr/bin/ranlib ../../../../build/lib/libpvpcs_hw_110kw.a

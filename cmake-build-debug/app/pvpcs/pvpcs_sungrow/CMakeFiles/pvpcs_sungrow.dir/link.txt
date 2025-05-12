@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../../build/lib/libpvpcs_sungrow.a  CMakeFiles/pvpcs_sungrow.dir/pvpcs_sungrow_data_protocol.c.o CMakeFiles/pvpcs_sungrow.dir/pvpcs_sungrow_external_api.c.o CMakeFiles/pvpcs_sungrow.dir/pvpcs_sungrow_link_api.c.o
-/usr/bin/ranlib ../../../../build/lib/libpvpcs_sungrow.a

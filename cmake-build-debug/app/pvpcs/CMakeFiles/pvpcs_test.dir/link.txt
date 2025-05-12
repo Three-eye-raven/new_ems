@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../build/lib/libpvpcs_test.a  CMakeFiles/pvpcs_test.dir/pvpcs_rtu_communication_thread.c.o CMakeFiles/pvpcs_test.dir/pvpcs_tcp_communication_thread.c.o
-/usr/bin/ranlib ../../../build/lib/libpvpcs_test.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../build/lib/libdata_sync_spsc.a  CMakeFiles/data_sync_spsc.dir/data_sync_spsc_core.c.o CMakeFiles/data_sync_spsc.dir/data_sync_spsc_test.c.o
-/usr/bin/ranlib ../../../build/lib/libdata_sync_spsc.a

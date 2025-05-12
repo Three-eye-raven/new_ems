@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../build/lib/libatomic_test.a  CMakeFiles/atomic_test.dir/atomic_test.c.o
-/usr/bin/ranlib ../../../build/lib/libatomic_test.a

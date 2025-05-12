@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../build/lib/liblog_port.a  CMakeFiles/log_port.dir/log_port_zlog.c.o
-/usr/bin/ranlib ../../../build/lib/liblog_port.a

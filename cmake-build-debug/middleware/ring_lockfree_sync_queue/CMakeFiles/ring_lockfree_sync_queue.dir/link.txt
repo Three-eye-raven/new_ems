@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../build/lib/libring_lockfree_sync_queue.a  CMakeFiles/ring_lockfree_sync_queue.dir/ring_lockfree_sync_queue.c.o
-/usr/bin/ranlib ../../../build/lib/libring_lockfree_sync_queue.a

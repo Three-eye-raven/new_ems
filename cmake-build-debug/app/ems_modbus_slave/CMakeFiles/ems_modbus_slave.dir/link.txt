@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../build/lib/libems_modbus_slave.a  CMakeFiles/ems_modbus_slave.dir/ems_modbus_slave.c.o CMakeFiles/ems_modbus_slave.dir/ems_modbus_slave_list.c.o
-/usr/bin/ranlib ../../../build/lib/libems_modbus_slave.a
