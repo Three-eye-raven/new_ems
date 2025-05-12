@@ -11,18 +11,18 @@
 #include <string.h>
 
 static modbus_mapping_t empty_mapping = {
-        .nb_bits               = 0,
-        .nb_input_bits         = 0,
-        .nb_input_registers    = 0,
-        .nb_registers          = 0,
-        .start_bits            = 0,
-        .start_input_bits      = 0,
-        .start_input_registers = 0,
-        .start_registers       = 0,
-        .tab_bits              = NULL,
-        .tab_input_bits        = NULL,
-        .tab_input_registers   = NULL,
-        .tab_registers         = NULL,
+    .nb_bits               = 0,
+    .nb_input_bits         = 0,
+    .nb_input_registers    = 0,
+    .nb_registers          = 0,
+    .start_bits            = 0,
+    .start_input_bits      = 0,
+    .start_input_registers = 0,
+    .start_registers       = 0,
+    .tab_bits              = NULL,
+    .tab_input_bits        = NULL,
+    .tab_input_registers   = NULL,
+    .tab_registers         = NULL,
 };
 
 uint8_t modbus_slave_tcp_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* pChannelInfo)
@@ -45,13 +45,9 @@ uint8_t modbus_slave_tcp_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* p
                 }
         }
         // 提取从机id 功能码 数据地址 数据长度
-        const uint8_t  funCode = req[7];
-        const uint16_t dataAddress =
-                (req[8]
-                << 8) + req[9];
-        uint16_t dataLength =
-                (req[10]
-                << 8) + req[11];
+        const uint8_t  funCode     = req[7];
+        const uint16_t dataAddress = (req[8] << 8) + req[9];
+        uint16_t       dataLength  = (req[10] << 8) + req[11];
 #if 0
         const uint8_t  slaveId = req[MODBUS_SLAVE_RC_SLAVE_ID_IDX + MODBUS_SLAVE_TCP_RC_OFFSET];
         if (slaveId != pChannelInfo->slaveID) {
@@ -62,18 +58,18 @@ uint8_t modbus_slave_tcp_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* p
 #endif
         uint16_t         u16temp[MODBUS_MAX_READ_REGISTERS];
         modbus_mapping_t mapping = {
-                .start_bits            = dataAddress,
-                .start_input_bits      = dataAddress,
-                .start_input_registers = dataAddress,
-                .start_registers       = dataAddress,
-                .nb_bits               = MODBUS_MAX_READ_BITS / 8,
-                .nb_input_bits         = MODBUS_MAX_READ_BITS / 8,
-                .nb_input_registers    = MODBUS_MAX_READ_REGISTERS,
-                .nb_registers          = MODBUS_MAX_READ_REGISTERS,
-                .tab_bits              = (uint8_t*)u16temp,
-                .tab_input_bits        = (uint8_t*)u16temp,
-                .tab_input_registers   = u16temp,
-                .tab_registers         = u16temp,
+            .start_bits            = dataAddress,
+            .start_input_bits      = dataAddress,
+            .start_input_registers = dataAddress,
+            .start_registers       = dataAddress,
+            .nb_bits               = MODBUS_MAX_READ_BITS / 8,
+            .nb_input_bits         = MODBUS_MAX_READ_BITS / 8,
+            .nb_input_registers    = MODBUS_MAX_READ_REGISTERS,
+            .nb_registers          = MODBUS_MAX_READ_REGISTERS,
+            .tab_bits              = (uint8_t*)u16temp,
+            .tab_input_bits        = (uint8_t*)u16temp,
+            .tab_input_registers   = u16temp,
+            .tab_registers         = u16temp,
         };
         modbus_mapping_t*      pMapping  = NULL;
         ModbusSlaveSyncList_T* pList     = NULL;
@@ -118,7 +114,7 @@ uint8_t modbus_slave_tcp_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* p
         }
         else {
                 const uint16_t reply =
-                        modbus_slave_sync_list_data_get(pList, dataAddress, dataLength, u16temp);
+                    modbus_slave_sync_list_data_get(pList, dataAddress, dataLength, u16temp);
                 if (0 == reply) {
                         pMapping = &mapping;
                 }
@@ -133,7 +129,7 @@ uint8_t modbus_slave_tcp_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* p
         if (-1 != writeType) {
                 if (NULL != pChannelInfo->writeApi[writeType].cmd_analyse) {
                         pChannelInfo->writeApi[writeType].cmd_analyse(
-                                dataAddress, dataLength, pSrc, pChannelInfo->channelId);
+                            dataAddress, dataLength, pSrc, pChannelInfo->channelId);
                 }
         }
 exit:
@@ -171,18 +167,18 @@ uint8_t modbus_slave_rtu_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* p
 #endif
         uint16_t         u16temp[MODBUS_MAX_READ_REGISTERS];
         modbus_mapping_t mapping = {
-                .start_bits            = dataAddress,
-                .start_input_bits      = dataAddress,
-                .start_input_registers = dataAddress,
-                .start_registers       = dataAddress,
-                .nb_bits               = MODBUS_MAX_READ_BITS / 8,
-                .nb_input_bits         = MODBUS_MAX_READ_BITS / 8,
-                .nb_input_registers    = MODBUS_MAX_READ_REGISTERS,
-                .nb_registers          = MODBUS_MAX_READ_REGISTERS,
-                .tab_bits              = (uint8_t*)u16temp,
-                .tab_input_bits        = (uint8_t*)u16temp,
-                .tab_input_registers   = u16temp,
-                .tab_registers         = u16temp,
+            .start_bits            = dataAddress,
+            .start_input_bits      = dataAddress,
+            .start_input_registers = dataAddress,
+            .start_registers       = dataAddress,
+            .nb_bits               = MODBUS_MAX_READ_BITS / 8,
+            .nb_input_bits         = MODBUS_MAX_READ_BITS / 8,
+            .nb_input_registers    = MODBUS_MAX_READ_REGISTERS,
+            .nb_registers          = MODBUS_MAX_READ_REGISTERS,
+            .tab_bits              = (uint8_t*)u16temp,
+            .tab_input_bits        = (uint8_t*)u16temp,
+            .tab_input_registers   = u16temp,
+            .tab_registers         = u16temp,
         };
         modbus_mapping_t*      pMapping  = NULL;
         ModbusSlaveSyncList_T* pList     = NULL;
@@ -216,9 +212,9 @@ uint8_t modbus_slave_rtu_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* p
                 break;
         case 0x10:
                 // 写多个寄存器
-                pList      = pChannelInfo->pBuffer[MODBUS_SLAVE_HOLDING_REGISTER];
-                dataLength = 1;
-                pSrc       = &req[MODBUS_SLAVE_RC_DATA_SRC_START_INDEX];
+                pList     = pChannelInfo->pBuffer[MODBUS_SLAVE_HOLDING_REGISTER];
+                writeType = 1;
+                pSrc      = &req[MODBUS_SLAVE_RC_DATA_SRC_START_INDEX];
                 break;
         default: break;
         }
@@ -227,7 +223,7 @@ uint8_t modbus_slave_rtu_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* p
         }
         else {
                 const uint16_t reply =
-                        modbus_slave_sync_list_data_get(pList, dataAddress, dataLength, u16temp);
+                    modbus_slave_sync_list_data_get(pList, dataAddress, dataLength, u16temp);
                 if (0 == reply) {
                         pMapping = &mapping;
                 }
@@ -242,9 +238,11 @@ uint8_t modbus_slave_rtu_reply(modbus_t* pCtx, const ModbusSlaveChannelInfo_T* p
         if (-1 != writeType) {
                 if (NULL != pChannelInfo->writeApi[writeType].cmd_analyse) {
                         pChannelInfo->writeApi[writeType].cmd_analyse(
-                                dataAddress, dataLength, pSrc, pChannelInfo->channelId);
+                            dataAddress, dataLength, pSrc, pChannelInfo->channelId);
                 }
         }
 exit:
         return ret;
 }
+
+
