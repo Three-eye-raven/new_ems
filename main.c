@@ -1,11 +1,11 @@
 #if 0
-#include <stdint.h>
-#include <stdio.h>
-#include <assert.h>
+#        include <assert.h>
+#        include <stdint.h>
+#        include <stdio.h>
 
-#include "pvpcs_open_interface.h"
+#        include "pvpcs_open_interface.h"
 
-#include "modbus_master_api.h"
+#        include "modbus_master_api.h"
 
 int main() {
     bool ret = false;
@@ -19,16 +19,16 @@ int main() {
 #endif
 
 #if 0
-#include <modbus.h>
-#include <pthread.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <unistd.h>
+#        include <errno.h>
+#        include <modbus.h>
+#        include <pthread.h>
+#        include <stdio.h>
+#        include <stdlib.h>
+#        include <unistd.h>
 
-#define MODBUS_PORT 1502
-#define SLAVE_ID    1
-#define NUM_REGISTERS 100
+#        define MODBUS_PORT 1502
+#        define SLAVE_ID 1
+#        define NUM_REGISTERS 100
 
 // 共享数据映射（需要线程安全访问）
 modbus_mapping_t *mapping;
@@ -153,7 +153,7 @@ int main() {
 
 #if 0
 
-#include "ring_lockfree_sync_queue_api.h"
+#        include "ring_lockfree_sync_queue_api.h"
 
 int main()
 {
@@ -165,9 +165,9 @@ int main()
 
 #if 0
 
-#include "ems_modbus_slave.h"
+#        include "ems_modbus_slave.h"
 
-#include <linux/can/j1939.h>
+#        include <linux/can/j1939.h>
 
 int main()
 {
@@ -180,35 +180,32 @@ int main()
 
 #if 0
 
-#include "pthread.h"
-#include "unistd.h"
+#        include "pthread.h"
+#        include "unistd.h"
 
-#include <libsocketcan.h>
-#include <can_netlink.h>
+#        include <can_netlink.h>
+#        include <libsocketcan.h>
+#        include <linux/can.h>
+#        include <net/if.h>
 #        include <stdint.h>
+#        include <stdio.h>
 #        include <string.h>
-#include <stdio.h>
-#include <sys/socket.h>
-#include <linux/can.h>
-#include <sys/ioctl.h>
-#include <net/if.h>
+#        include <sys/ioctl.h>
+#        include <sys/socket.h>
 
 static int can_sock = -1;
 static pthread_t monitor_thread;
 
 // 协议常量定义
-#define BCU_ADDR 0xE8
-#define PC_ADDR 0xF4
-#define CAN_PRIORITY 6
-#define CAN_DATA_PAGE 0
+#        define BCU_ADDR 0xE8
+#        define PC_ADDR 0xF4
+#        define CAN_PRIORITY 6
+#        define CAN_DATA_PAGE 0
 
 // J1939 PDU格式构造宏
-#define BUILD_PDU(p, pf, ps, sa) \
-    (((p & 0x7) << 26) | \
-    ((CAN_DATA_PAGE & 0x1) << 25) | \
-    ((pf & 0xFF) << 16) | \
-    ((ps & 0xFF) << 8) | \
-    (sa & 0xFF))
+#        define BUILD_PDU(p, pf, ps, sa)                                                   \
+                (((p & 0x7) << 26) | ((CAN_DATA_PAGE & 0x1) << 25) | ((pf & 0xFF) << 16) | \
+                 ((ps & 0xFF) << 8) | (sa & 0xFF))
 
 
 // 状态监控线程
@@ -259,8 +256,8 @@ int can_send(uint32_t can_id, const uint8_t *data, uint8_t dlc) {
 }
 
 // BCU地址定义
-#define BCU_ADDR 0xE8
-#define PC_ADDR 0xF4
+#        define BCU_ADDR 0xE8
+#        define PC_ADDR 0xF4
 
 // 电压数据结构
 typedef struct {
@@ -366,15 +363,15 @@ typedef struct
 #if 0
 
 /* For sockaddr_in */
-#include <netinet/in.h>
+#        include <netinet/in.h>
 /* For socket functions */
-#include <sys/socket.h>
+#        include <sys/socket.h>
 /* For gethostbyname */
-#include <netdb.h>
+#        include <netdb.h>
 
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
+#        include <stdio.h>
+#        include <string.h>
+#        include <unistd.h>
 
 int main(int c, char **v)
 {
@@ -400,9 +397,9 @@ int main(int c, char **v)
 #        include <sys/socket.h>
 #        include <unistd.h>
 
-#        define CAN_INTERFACE     "vcan0"
-#define WATCHDOG_TIMEOUT  5.0  // 通信超时5秒
-#define MAX_RESET_RETRY   3     // 最大复位重试次数
+#        define CAN_INTERFACE "vcan0"
+#        define WATCHDOG_TIMEOUT 5.0   // 通信超时5秒
+#        define MAX_RESET_RETRY 3      // 最大复位重试次数
 
 // 程序状态管理结构体
 struct can_manager {
@@ -717,20 +714,20 @@ int main(void)
 
 #if 0
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/socket.h>
-#include <sys/ioctl.h>
-#include <net/if.h>
-#include <linux/can/raw.h>
-#include <libsocketcan.h>
-#include <event2/event.h>
+#        include <event2/event.h>
+#        include <libsocketcan.h>
+#        include <linux/can/raw.h>
+#        include <net/if.h>
+#        include <stdio.h>
+#        include <stdlib.h>
+#        include <string.h>
+#        include <sys/ioctl.h>
+#        include <sys/socket.h>
+#        include <unistd.h>
 
-#define CAN_INTERFACE    "vcan0"
-#define CHECK_INTERVAL   2  // 状态检查间隔(秒)
-#define SEND_INTERVAL_MS 10    // 发送间隔10ms
+#        define CAN_INTERFACE "vcan0"
+#        define CHECK_INTERVAL 2      // 状态检查间隔(秒)
+#        define SEND_INTERVAL_MS 10   // 发送间隔10ms
 
 struct can_context {
         struct event_base *base;
@@ -980,149 +977,157 @@ int main()
 
 
 #if 1
-#include <modbus.h>
-#include <event2/event.h>
-#include <event2/listener.h>
-#include <arpa/inet.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <string.h>
+#        include <arpa/inet.h>
+#        include <errno.h>
+#        include <event2/event.h>
+#        include <event2/listener.h>
+#        include <fcntl.h>
+#        include <modbus.h>
+#        include <stdio.h>
+#        include <stdlib.h>
+#        include <string.h>
+#        include <unistd.h>
 
-typedef struct {
-    modbus_t *ctx;
-    struct event *event;
-    modbus_mapping_t *mb_mapping;
+typedef struct
+{
+        modbus_t*         ctx;
+        struct event*     event;
+        modbus_mapping_t* mb_mapping;
 } client_t;
 
-void close_client(client_t *client) {
-    if (client) {
-        if (client->event) {
-            event_free(client->event);
+void close_client(client_t* client)
+{
+        if (client) {
+                if (client->event) {
+                        event_free(client->event);
+                }
+                if (client->ctx) {
+                        modbus_close(client->ctx);
+                        modbus_free(client->ctx);
+                }
+                if (client->mb_mapping) {
+                        modbus_mapping_free(client->mb_mapping);
+                }
+                free(client);
         }
-        if (client->ctx) {
-            modbus_close(client->ctx);
-            modbus_free(client->ctx);
-        }
-        if (client->mb_mapping) {
-            modbus_mapping_free(client->mb_mapping);
-        }
-        free(client);
-    }
 }
 
-void client_read_cb(evutil_socket_t fd, short events, void *arg) {
-    client_t *client = (client_t *)arg;
-    modbus_t *ctx = client->ctx;
-    uint8_t req[MODBUS_TCP_MAX_ADU_LENGTH];
+void client_read_cb(evutil_socket_t fd, short events, void* arg)
+{
+        client_t* client = (client_t*)arg;
+        modbus_t* ctx    = client->ctx;
+        uint8_t   req[MODBUS_TCP_MAX_ADU_LENGTH];
 
-    int rc = modbus_receive(ctx, req);
-    if (rc > 0) {
-        // 处理请求并回复
-        rc = modbus_reply(ctx, req, rc, client->mb_mapping);
-        if (rc == -1) {
-            fprintf(stderr, "Failed to reply: %s\n", modbus_strerror(errno));
-            close_client(client);
+        int rc = modbus_receive(ctx, req);
+        if (rc > 0) {
+                // 处理请求并回复
+                rc = modbus_reply(ctx, req, rc, client->mb_mapping);
+                if (rc == -1) {
+                        fprintf(stderr, "Failed to reply: %s\n", modbus_strerror(errno));
+                        close_client(client);
+                }
         }
-    } else if (rc == -1) {
-        if (errno == EAGAIN || errno == EWOULDBLOCK) {
-            // 数据未就绪，等待下次事件
-            return;
-        } else {
-            perror("modbus_receive");
-            close_client(client);
+        else if (rc == -1) {
+                if (errno == EAGAIN || errno == EWOULDBLOCK) {
+                        // 数据未就绪，等待下次事件
+                        return;
+                }
+                else {
+                        perror("modbus_receive");
+                        close_client(client);
+                }
         }
-    } else {
-        // 连接关闭
-        close_client(client);
-    }
+        else {
+                // 连接关闭
+                close_client(client);
+        }
 }
 
-void accept_cb(struct evconnlistener *listener, evutil_socket_t fd,
-               struct sockaddr *sa, int socklen, void *user_data) {
-    struct event_base *base = evconnlistener_get_base(listener);
-    modbus_t *ctx = modbus_new_tcp(NULL, 0); // 使用已连接的socket
-    if (!ctx) {
-        fprintf(stderr, "Failed to create modbus context\n");
-        close(fd);
-        return;
-    }
-    modbus_set_socket(ctx, fd);
+void accept_cb(struct evconnlistener* listener, evutil_socket_t fd, struct sockaddr* sa,
+               int socklen, void* user_data)
+{
+        struct event_base* base = evconnlistener_get_base(listener);
+        modbus_t*          ctx  = modbus_new_tcp(NULL, 0);   // 使用已连接的socket
+        if (!ctx) {
+                fprintf(stderr, "Failed to create modbus context\n");
+                close(fd);
+                return;
+        }
+        modbus_set_socket(ctx, fd);
 
-    if (evutil_make_socket_nonblocking(fd) == -1) {
-        perror("evutil_make_socket_nonblocking");
-        modbus_free(ctx);
-        close(fd);
-        return;
-    }
+        if (evutil_make_socket_nonblocking(fd) == -1) {
+                perror("evutil_make_socket_nonblocking");
+                modbus_free(ctx);
+                close(fd);
+                return;
+        }
 
-    modbus_mapping_t *mb_mapping = modbus_mapping_new(500, 500, 500, 500);
-    if (!mb_mapping) {
-        fprintf(stderr, "Failed to create modbus mapping\n");
-        modbus_free(ctx);
-        close(fd);
-        return;
-    }
+        modbus_mapping_t* mb_mapping = modbus_mapping_new(500, 500, 500, 500);
+        if (!mb_mapping) {
+                fprintf(stderr, "Failed to create modbus mapping\n");
+                modbus_free(ctx);
+                close(fd);
+                return;
+        }
 
-    client_t *client = (client_t *)malloc(sizeof(client_t));
-    if (!client) {
-        perror("malloc");
-        modbus_free(ctx);
-        modbus_mapping_free(mb_mapping);
-        close(fd);
-        return;
-    }
-    client->ctx = ctx;
-    client->mb_mapping = mb_mapping;
+        client_t* client = (client_t*)malloc(sizeof(client_t));
+        if (!client) {
+                perror("malloc");
+                modbus_free(ctx);
+                modbus_mapping_free(mb_mapping);
+                close(fd);
+                return;
+        }
+        client->ctx        = ctx;
+        client->mb_mapping = mb_mapping;
 
-    client->event = event_new(base, fd, EV_READ|EV_PERSIST, client_read_cb, client);
-    event_add(client->event, NULL);
+        client->event = event_new(base, fd, EV_READ | EV_PERSIST, client_read_cb, client);
+        event_add(client->event, NULL);
 }
 
-int main() {
-    struct event_base *base = event_base_new();
-    if (!base) {
-        fprintf(stderr, "Could not initialize libevent\n");
-        return 1;
-    }
+int main()
+{
+        struct event_base* base = event_base_new();
+        if (!base) {
+                fprintf(stderr, "Could not initialize libevent\n");
+                return 1;
+        }
 
-    modbus_t *ctx = modbus_new_tcp("0.0.0.0", 1502);
-    if (!ctx) {
-        fprintf(stderr, "Failed to create modbus context\n");
-        return 1;
-    }
+        modbus_t* ctx = modbus_new_tcp("0.0.0.0", 1502);
+        if (!ctx) {
+                fprintf(stderr, "Failed to create modbus context\n");
+                return 1;
+        }
 
-    int listen_fd = modbus_tcp_listen(ctx, 1);
-    if (listen_fd == -1) {
-        fprintf(stderr, "Listen failed: %s\n", modbus_strerror(errno));
+        int listen_fd = modbus_tcp_listen(ctx, 1);
+        if (listen_fd == -1) {
+                fprintf(stderr, "Listen failed: %s\n", modbus_strerror(errno));
+                modbus_free(ctx);
+                return 1;
+        }
+
+        if (evutil_make_socket_nonblocking(listen_fd) == -1) {
+                perror("evutil_make_socket_nonblocking");
+                close(listen_fd);
+                modbus_free(ctx);
+                return 1;
+        }
+
+        struct evconnlistener* listener = evconnlistener_new(
+            base, accept_cb, NULL, LEV_OPT_CLOSE_ON_FREE | LEV_OPT_REUSEABLE, -1, listen_fd);
+        if (!listener) {
+                fprintf(stderr, "Could not create listener\n");
+                close(listen_fd);
+                modbus_free(ctx);
+                return 1;
+        }
+
+        event_base_dispatch(base);
+
+        evconnlistener_free(listener);
         modbus_free(ctx);
-        return 1;
-    }
+        event_base_free(base);
 
-    if (evutil_make_socket_nonblocking(listen_fd) == -1) {
-        perror("evutil_make_socket_nonblocking");
-        close(listen_fd);
-        modbus_free(ctx);
-        return 1;
-    }
-
-    struct evconnlistener *listener = evconnlistener_new(
-        base, accept_cb, NULL, LEV_OPT_CLOSE_ON_FREE|LEV_OPT_REUSEABLE, -1, listen_fd);
-    if (!listener) {
-        fprintf(stderr, "Could not create listener\n");
-        close(listen_fd);
-        modbus_free(ctx);
-        return 1;
-    }
-
-    event_base_dispatch(base);
-
-    evconnlistener_free(listener);
-    modbus_free(ctx);
-    event_base_free(base);
-
-    return 0;
+        return 0;
 }
 #endif
