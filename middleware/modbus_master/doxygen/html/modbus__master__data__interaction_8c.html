@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modbus master: modbus_master_data_interaction.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">modbus master
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">modbus_master_data_interaction.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>modbus master 主机与从机数据交互函数  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="modbus__master__api_8h_source.html">modbus_master_api.h</a>&quot;</code><br />
+<code>#include &lt;modbus.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div>
+<p><a href="modbus__master__data__interaction_8c_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aa59cd69b41b561ab155003bcfb2635d8" id="r_aa59cd69b41b561ab155003bcfb2635d8"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa59cd69b41b561ab155003bcfb2635d8">get_timestamp_ms</a> (void)</td></tr>
+<tr class="memdesc:aa59cd69b41b561ab155003bcfb2635d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前的时间戳(ms)  <br /></td></tr>
+<tr class="separator:aa59cd69b41b561ab155003bcfb2635d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96f72eb3e320c43c12e41a826f5ebd90" id="r_a96f72eb3e320c43c12e41a826f5ebd90"><td class="memItemLeft" align="right" valign="top">static int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96f72eb3e320c43c12e41a826f5ebd90">get_elapsed_ms</a> (const uint64_t timestampMs)</td></tr>
+<tr class="memdesc:a96f72eb3e320c43c12e41a826f5ebd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取输入时间戳和当前的时间戳的差值  <br /></td></tr>
+<tr class="separator:a96f72eb3e320c43c12e41a826f5ebd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e65149102cc0e0d4dff594b02d60f1" id="r_a04e65149102cc0e0d4dff594b02d60f1"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04e65149102cc0e0d4dff594b02d60f1">get_future_ms</a> (const uint64_t timeStep)</td></tr>
+<tr class="memdesc:a04e65149102cc0e0d4dff594b02d60f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取输入时间增加步长和当前的时间戳的和  <br /></td></tr>
+<tr class="separator:a04e65149102cc0e0d4dff594b02d60f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119a7357d2d0c7dfbf67489b49c8fd30" id="r_a119a7357d2d0c7dfbf67489b49c8fd30"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a119a7357d2d0c7dfbf67489b49c8fd30">swap_groups</a> (uint16_t *pSrc, const uint16_t swapStep, const uint16_t num)</td></tr>
+<tr class="memdesc:a119a7357d2d0c7dfbf67489b49c8fd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">对uint16_t数组按照指定的单元步长进行翻转  <br /></td></tr>
+<tr class="separator:a119a7357d2d0c7dfbf67489b49c8fd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae871498d2a941fa4ed4a9f32b527e21" id="r_aae871498d2a941fa4ed4a9f32b527e21"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae871498d2a941fa4ed4a9f32b527e21">msleep</a> (const unsigned long ms)</td></tr>
+<tr class="separator:aae871498d2a941fa4ed4a9f32b527e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d2a5aa776f80017d4f6368839bd3d2" id="r_a57d2a5aa776f80017d4f6368839bd3d2"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57d2a5aa776f80017d4f6368839bd3d2">modbus_master_slave_register_info_read</a> (modbus_t *pCtx, <a class="el" href="struct_modbus_master_readable_sync_info___t.html">ModbusMasterReadableSyncInfo_T</a> *pSyncInfo, const uint8_t deviceId)</td></tr>
+<tr class="memdesc:a57d2a5aa776f80017d4f6368839bd3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">对单个可读同步信息进行读取  <br /></td></tr>
+<tr class="separator:a57d2a5aa776f80017d4f6368839bd3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8e0af4857640911c543e5b0ecc3e37" id="r_a3a8e0af4857640911c543e5b0ecc3e37"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a8e0af4857640911c543e5b0ecc3e37">modbus_master_slave_register_info_write</a> (modbus_t *pCtx, const <a class="el" href="struct_modbus_master_writable_sync_info___t.html">ModbusMasterWritableSyncInfo_T</a> *pSyncInfo, const uint8_t deviceId)</td></tr>
+<tr class="memdesc:a3a8e0af4857640911c543e5b0ecc3e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">对单个可写同步信息进行写同步  <br /></td></tr>
+<tr class="separator:a3a8e0af4857640911c543e5b0ecc3e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ad438d4faa3560976ca895ea477c5e" id="r_a96ad438d4faa3560976ca895ea477c5e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96ad438d4faa3560976ca895ea477c5e">modbus_master_set_slave_offline</a> (<a class="el" href="struct_modbus_master_slave_info___t.html">ModbusMasterSlaveInfo_T</a> *pSlaveInfo)</td></tr>
+<tr class="memdesc:a96ad438d4faa3560976ca895ea477c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置从设备掉线  <br /></td></tr>
+<tr class="separator:a96ad438d4faa3560976ca895ea477c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fe550759c485dd68125a9a5be21a31" id="r_a80fe550759c485dd68125a9a5be21a31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80fe550759c485dd68125a9a5be21a31">modbus_master_set_slave_online</a> (<a class="el" href="struct_modbus_master_slave_info___t.html">ModbusMasterSlaveInfo_T</a> *pSlaveInfo)</td></tr>
+<tr class="memdesc:a80fe550759c485dd68125a9a5be21a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置从设备在线  <br /></td></tr>
+<tr class="separator:a80fe550759c485dd68125a9a5be21a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bc06ebc60afdc11a36a01b8751b660" id="r_aa8bc06ebc60afdc11a36a01b8751b660"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8bc06ebc60afdc11a36a01b8751b660">modbus_master_slave_readable_infos_sync</a> (<a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *pChannel, const uint8_t slaveIdx)</td></tr>
+<tr class="memdesc:aa8bc06ebc60afdc11a36a01b8751b660"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步从设备所有的可读信息  <br /></td></tr>
+<tr class="separator:aa8bc06ebc60afdc11a36a01b8751b660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e129a4ac5e21ccc0adfd20f8f7c9a2" id="r_a51e129a4ac5e21ccc0adfd20f8f7c9a2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51e129a4ac5e21ccc0adfd20f8f7c9a2">modbus_master_slave_writable_infos_sync</a> (<a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *pChannel, const uint8_t slaveIdx)</td></tr>
+<tr class="memdesc:a51e129a4ac5e21ccc0adfd20f8f7c9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步从设备所有的可写信息  <br /></td></tr>
+<tr class="separator:a51e129a4ac5e21ccc0adfd20f8f7c9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>modbus master 主机与从机数据交互函数 </p>
+<p>主要是读同步和写同步功能 </p><dl class="section author"><dt>作者</dt><dd>ylb </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025-04-25 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section user"><dt>History:</dt><dd>version v1.0: 基础程序首次创建<br  />
+</dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 中定义.</p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a96f72eb3e320c43c12e41a826f5ebd90" name="a96f72eb3e320c43c12e41a826f5ebd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96f72eb3e320c43c12e41a826f5ebd90">&#9670;&#160;</a></span>get_elapsed_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int64_t get_elapsed_ms </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t</td>          <td class="paramname"><span class="paramname"><em>timestampMs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取输入时间戳和当前的时间戳的差值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestampMs</td><td>输入时间戳</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint64_t 时间差(ms) </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>计算结果为 当前时间戳-输入时间戳 </dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00056">56</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">get_timestamp_ms()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00369">modbus_master_set_slave_offline()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00152">modbus_master_slave_register_info_read()</a> , 以及 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00265">modbus_master_slave_register_info_write()</a>.</p>
+
+</div>
+</div>
+<a id="a04e65149102cc0e0d4dff594b02d60f1" name="a04e65149102cc0e0d4dff594b02d60f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e65149102cc0e0d4dff594b02d60f1">&#9670;&#160;</a></span>get_future_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint64_t get_future_ms </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t</td>          <td class="paramname"><span class="paramname"><em>timeStep</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取输入时间增加步长和当前的时间戳的和 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeStep</td><td>时间增加步长</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint64_t 时间戳(ms) </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>计算结果为 当前时间戳+输入时间增加步长 </dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00071">71</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">get_timestamp_ms()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00369">modbus_master_set_slave_offline()</a>.</p>
+
+</div>
+</div>
+<a id="aa59cd69b41b561ab155003bcfb2635d8" name="aa59cd69b41b561ab155003bcfb2635d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa59cd69b41b561ab155003bcfb2635d8">&#9670;&#160;</a></span>get_timestamp_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint64_t get_timestamp_ms </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前的时间戳(ms) </p>
+<dl class="section return"><dt>返回</dt><dd>uint64_t 当前的时间戳(ms) </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>精度取决于系统 </dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">38</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00056">get_elapsed_ms()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00071">get_future_ms()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00401">modbus_master_set_slave_online()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00447">modbus_master_slave_readable_infos_sync()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00152">modbus_master_slave_register_info_read()</a> , 以及 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00544">modbus_master_slave_writable_infos_sync()</a>.</p>
+
+</div>
+</div>
+<a id="a96ad438d4faa3560976ca895ea477c5e" name="a96ad438d4faa3560976ca895ea477c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ad438d4faa3560976ca895ea477c5e">&#9670;&#160;</a></span>modbus_master_set_slave_offline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void modbus_master_set_slave_offline </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_slave_info___t.html">ModbusMasterSlaveInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pSlaveInfo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置从设备掉线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSlaveInfo</td><td>从设备信息</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00369">369</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00113">ModbusMasterDeviceLinkState_T::connected</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00079">ModbusMasterProtocolTime_T::delayCardinality</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00125">ModbusMasterSlaveInfo_T::deviceId</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00056">get_elapsed_ms()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00071">get_future_ms()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00115">ModbusMasterDeviceLinkState_T::lastHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00105">ModbusMasterDataProtocol_T::linkApi</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00127">ModbusMasterSlaveInfo_T::linkState</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00088">ModbusMasterProtocolLinkApi_T::lose</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00116">ModbusMasterDeviceLinkState_T::nextHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00128">ModbusMasterSlaveInfo_T::pProtocol</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00117">ModbusMasterDeviceLinkState_T::retryCnt</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00078">ModbusMasterProtocolTime_T::retryInterval</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00104">ModbusMasterDataProtocol_T::time</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00080">ModbusMasterProtocolTime_T::timeoutThreshold</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00447">modbus_master_slave_readable_infos_sync()</a> , 以及 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00544">modbus_master_slave_writable_infos_sync()</a>.</p>
+
+</div>
+</div>
+<a id="a80fe550759c485dd68125a9a5be21a31" name="a80fe550759c485dd68125a9a5be21a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80fe550759c485dd68125a9a5be21a31">&#9670;&#160;</a></span>modbus_master_set_slave_online()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void modbus_master_set_slave_online </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_slave_info___t.html">ModbusMasterSlaveInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pSlaveInfo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置从设备在线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSlaveInfo</td><td>从设备信息</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00401">401</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00091">ModbusMasterProtocolLinkApi_T::connect</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00113">ModbusMasterDeviceLinkState_T::connected</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00125">ModbusMasterSlaveInfo_T::deviceId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00114">ModbusMasterDeviceLinkState_T::firstHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00041">ModbusMasterReadableSyncInfo_T::firstRecord</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">get_timestamp_ms()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00039">ModbusMasterReadableSyncInfo_T::interval</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00105">ModbusMasterDataProtocol_T::linkApi</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00127">ModbusMasterSlaveInfo_T::linkState</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00128">ModbusMasterSlaveInfo_T::pProtocol</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00100">ModbusMasterDataProtocol_T::pReadableSyncInfos</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00101">ModbusMasterDataProtocol_T::readableSyncInfosNum</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00117">ModbusMasterDeviceLinkState_T::retryCnt</a> , 以及 <a class="el" href="struct_modbus_master_readable_sync_info___t.html#a82df20bbd70a6bae1c715a926c0e1261">ModbusMasterReadableSyncInfo_T::Schedule</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00447">modbus_master_slave_readable_infos_sync()</a> , 以及 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00544">modbus_master_slave_writable_infos_sync()</a>.</p>
+
+</div>
+</div>
+<a id="aa8bc06ebc60afdc11a36a01b8751b660" name="aa8bc06ebc60afdc11a36a01b8751b660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8bc06ebc60afdc11a36a01b8751b660">&#9670;&#160;</a></span>modbus_master_slave_readable_infos_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t modbus_master_slave_readable_infos_sync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveIdx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同步从设备所有的可读信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>通讯通道 </td></tr>
+    <tr><td class="paramname">slaveIdx</td><td>从设备索引号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ret的内容按照bit位来表示同步结果，若同步无异常，ret = 0； bit0:pCtx为空； bit1:slaveIdx越界 bit2:未绑定协议表 bit3:协议表不完整，缺失读取内容 bit4:通道未初始化 bit5:协议表内容不一致 bit6:读取失败</dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00447">447</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00113">ModbusMasterDeviceLinkState_T::connected</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00125">ModbusMasterSlaveInfo_T::deviceId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00077">ModbusMasterProtocolTime_T::frameInterval</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">get_timestamp_ms()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00115">ModbusMasterDeviceLinkState_T::lastHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00127">ModbusMasterSlaveInfo_T::linkState</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00369">modbus_master_set_slave_offline()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00401">modbus_master_set_slave_online()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00152">modbus_master_slave_register_info_read()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00121">msleep()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00116">ModbusMasterDeviceLinkState_T::nextHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00128">ModbusMasterSlaveInfo_T::pProtocol</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00100">ModbusMasterDataProtocol_T::pReadableSyncInfos</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00101">ModbusMasterDataProtocol_T::readableSyncInfosNum</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00126">ModbusMasterSlaveInfo_T::slaveId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00139">ModbusMasterChannelInfo_T::slaveInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00138">ModbusMasterChannelInfo_T::slaveNum</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00104">ModbusMasterDataProtocol_T::time</a>.</p>
+
+</div>
+</div>
+<a id="a57d2a5aa776f80017d4f6368839bd3d2" name="a57d2a5aa776f80017d4f6368839bd3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d2a5aa776f80017d4f6368839bd3d2">&#9670;&#160;</a></span>modbus_master_slave_register_info_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t modbus_master_slave_register_info_read </td>
+          <td>(</td>
+          <td class="paramtype">modbus_t *</td>          <td class="paramname"><span class="paramname"><em>pCtx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_readable_sync_info___t.html">ModbusMasterReadableSyncInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pSyncInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t</td>          <td class="paramname"><span class="paramname"><em>deviceId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对单个可读同步信息进行读取 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCtx</td><td>libmodbus 设备管理句柄 </td></tr>
+    <tr><td class="paramname">pSyncInfo</td><td>可读同步信息 </td></tr>
+    <tr><td class="paramname">deviceId</td><td>设备号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0:读取成功； bit0:pCtx为空 bit1:pSyncInfo为空 bit2:deviceId越界 bit3:读取失败 bit4:未满足读取动作启动条件</dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00152">152</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="struct_modbus_master_readable_sync_info___t.html#ac93188290d64ded959927e472232f189">ModbusMasterReadableSyncInfo_T::ExternalApi</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00028">ModbusMasterRegisterInfo_T::filpStep</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00041">ModbusMasterReadableSyncInfo_T::firstRecord</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00056">get_elapsed_ms()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">get_timestamp_ms()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00039">ModbusMasterReadableSyncInfo_T::interval</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00040">ModbusMasterReadableSyncInfo_T::lastTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00026">ModbusMasterRegisterInfo_T::length</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00036">MODBUS_MASTER_COIL_STATUS_REG</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00034">MODBUS_MASTER_HOLDING_REG</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00035">MODBUS_MASTER_INPUT_REG</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00037">MODBUS_MASTER_INPUT_STATUS_REG</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00029">MODBUS_MASTER_MAX_SLAVE_NUM</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00027">MODBUS_MASTER_PDU_MAX</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00045">ModbusMasterReadableSyncInfo_T::read_back_data_process</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00036">ModbusMasterReadableSyncInfo_T::registerInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00027">ModbusMasterRegisterInfo_T::regType</a>, <a class="el" href="struct_modbus_master_readable_sync_info___t.html#a82df20bbd70a6bae1c715a926c0e1261">ModbusMasterReadableSyncInfo_T::Schedule</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00025">ModbusMasterRegisterInfo_T::startAddr</a> , 以及 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00085">swap_groups()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00447">modbus_master_slave_readable_infos_sync()</a>.</p>
+
+</div>
+</div>
+<a id="a3a8e0af4857640911c543e5b0ecc3e37" name="a3a8e0af4857640911c543e5b0ecc3e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8e0af4857640911c543e5b0ecc3e37">&#9670;&#160;</a></span>modbus_master_slave_register_info_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t modbus_master_slave_register_info_write </td>
+          <td>(</td>
+          <td class="paramtype">modbus_t *</td>          <td class="paramname"><span class="paramname"><em>pCtx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_modbus_master_writable_sync_info___t.html">ModbusMasterWritableSyncInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pSyncInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t</td>          <td class="paramname"><span class="paramname"><em>deviceId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对单个可写同步信息进行写同步 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCtx</td><td>libmodbus 设备管理句柄 </td></tr>
+    <tr><td class="paramname">pSyncInfo</td><td>可写同步信息 </td></tr>
+    <tr><td class="paramname">deviceId</td><td>设备号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0：同步成功 bit0:pCtx为空 bit1:pSyncInfo为空 bit2:deviceId越界 bit3:源数据获取接口为空 bit4:寄存器类型不合法，不支持写入 bit5:写入失败 bit6:不满足写入启动条件，未能获取源数据</dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00265">265</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="struct_modbus_master_writable_sync_info___t.html#a6e50f6dd9d3bfb6c024c8d7c3989f414">ModbusMasterWritableSyncInfo_T::ExternalApi</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00028">ModbusMasterRegisterInfo_T::filpStep</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00056">get_elapsed_ms()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00059">ModbusMasterWritableSyncInfo_T::interval</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00060">ModbusMasterWritableSyncInfo_T::lastTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00026">ModbusMasterRegisterInfo_T::length</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00036">MODBUS_MASTER_COIL_STATUS_REG</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00043">MODBUS_MASTER_FILP_0</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00034">MODBUS_MASTER_HOLDING_REG</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00029">MODBUS_MASTER_MAX_SLAVE_NUM</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00027">MODBUS_MASTER_PDU_MAX</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00056">ModbusMasterWritableSyncInfo_T::registerInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00027">ModbusMasterRegisterInfo_T::regType</a>, <a class="el" href="struct_modbus_master_writable_sync_info___t.html#ad25362678cc393bf786162d647efd59d">ModbusMasterWritableSyncInfo_T::Schedule</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00025">ModbusMasterRegisterInfo_T::startAddr</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00085">swap_groups()</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00064">ModbusMasterWritableSyncInfo_T::write_data_get</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00544">modbus_master_slave_writable_infos_sync()</a>.</p>
+
+</div>
+</div>
+<a id="a51e129a4ac5e21ccc0adfd20f8f7c9a2" name="a51e129a4ac5e21ccc0adfd20f8f7c9a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e129a4ac5e21ccc0adfd20f8f7c9a2">&#9670;&#160;</a></span>modbus_master_slave_writable_infos_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t modbus_master_slave_writable_infos_sync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveIdx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同步从设备所有的可写信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>通讯通道 </td></tr>
+    <tr><td class="paramname">slaveIdx</td><td>从设备索引号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ret的内容按照bit位来表示同步结果，若同步无异常，ret = 0； bit0:pCtx为空； bit1:slaveIdx越界 bit2:未绑定协议表 bit3:协议表不完整，缺失读取内容 bit4:通道未初始化 bit5:协议表内容不一致 bit6:写入失败</dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00544">544</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00113">ModbusMasterDeviceLinkState_T::connected</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00125">ModbusMasterSlaveInfo_T::deviceId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00077">ModbusMasterProtocolTime_T::frameInterval</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">get_timestamp_ms()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00115">ModbusMasterDeviceLinkState_T::lastHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00127">ModbusMasterSlaveInfo_T::linkState</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00369">modbus_master_set_slave_offline()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00401">modbus_master_set_slave_online()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00265">modbus_master_slave_register_info_write()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00121">msleep()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00116">ModbusMasterDeviceLinkState_T::nextHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00128">ModbusMasterSlaveInfo_T::pProtocol</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00102">ModbusMasterDataProtocol_T::pWritableSyncInfos</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00126">ModbusMasterSlaveInfo_T::slaveId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00139">ModbusMasterChannelInfo_T::slaveInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00138">ModbusMasterChannelInfo_T::slaveNum</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00104">ModbusMasterDataProtocol_T::time</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00103">ModbusMasterDataProtocol_T::writableSyncInfosNum</a>.</p>
+
+</div>
+</div>
+<a id="aae871498d2a941fa4ed4a9f32b527e21" name="aae871498d2a941fa4ed4a9f32b527e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae871498d2a941fa4ed4a9f32b527e21">&#9670;&#160;</a></span>msleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int msleep </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned long</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>毫秒级休眠函数（自动处理信号中断） </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>休眠毫秒数（必须 &gt;= 0） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 成功，-1 失败（参数无效或不可恢复的错误） </dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00121">121</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00447">modbus_master_slave_readable_infos_sync()</a> , 以及 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00544">modbus_master_slave_writable_infos_sync()</a>.</p>
+
+</div>
+</div>
+<a id="a119a7357d2d0c7dfbf67489b49c8fd30" name="a119a7357d2d0c7dfbf67489b49c8fd30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a119a7357d2d0c7dfbf67489b49c8fd30">&#9670;&#160;</a></span>swap_groups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void swap_groups </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>pSrc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t</td>          <td class="paramname"><span class="paramname"><em>swapStep</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t</td>          <td class="paramname"><span class="paramname"><em>num</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对uint16_t数组按照指定的单元步长进行翻转 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSrc</td><td>数据源 </td></tr>
+    <tr><td class="paramname">swapStep</td><td>单元反转步长 </td></tr>
+    <tr><td class="paramname">num</td><td>数据源的单位数量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00085">85</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00152">modbus_master_slave_register_info_read()</a> , 以及 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00265">modbus_master_slave_register_info_write()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+//
+// Created by three on 2025/4/27.
+//
+
+#ifndef PVPCS_SUNGROW_EXTERNAL_API_H
+#define PVPCS_SUNGROW_EXTERNAL_API_H
+
+#include <stdbool.h>
+#include <stdint.h>
+
+void pvpcs_sungrow_pmax_read_back_data_process(uint16_t deviceId, void* pRawData, uint8_t dataSize);
+void pvpcs_sungrow_daily_generation_power_read_back_data_process(uint16_t deviceId, void* pRawData,
+                                                                 uint8_t data_Size);
+void pvpcs_sungrow_total_generation_power_read_back_data_process(uint16_t deviceId, void* pRawData,
+                                                                 uint8_t data_Size);
+void pvpcs_sungrow_dc_input_power_read_back_data_process(uint16_t deviceId, void* pRawData,
+                                                         uint8_t data_Size);
+void pvpcs_sungrow_active_power_read_back_data_process(uint16_t deviceId, void* pRawData,
+                                                       uint8_t data_Size);
+void pvpcs_sungrow_device_status_read_back_data_process(uint16_t deviceId, void* pRawData,
+                                                        uint8_t data_Size);
+
+bool pvpcs_sungrow_power_set_enable_write_data_get(uint16_t deviceId, void* pRawData);
+bool pvpcs_sungrow_active_power_percentage_set_write_data_get(uint16_t deviceId, void* pRawData);
+
+
+#endif   // PVPCS_SUNGROW_EXTERNAL_API_H

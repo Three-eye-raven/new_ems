@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modbus master: modbus_master_cfg.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">modbus master
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">modbus_master_cfg.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="modbus__master__cfg_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef MODBUS_MASTER_CFG_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define MODBUS_MASTER_CFG_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a417a8d5a81d02ce24a6e67e327002b36">   15</a></span><span class="preprocessor">#define MODBUS_MASTER_VERSION &quot;1.0.0&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a195c8b181151cf65da1749604a22fa98">   18</a></span><span class="preprocessor">#define MODBUS_MASTER_INFO_PRINT(fmt, ...) printf(fmt, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a841d9eb95ec7a01bb9180dc8d784e55a">   21</a></span><span class="preprocessor">#define MODBUS_MASTER_ASSERT 0</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#aeaec13dead2dd72a7699231684b97ade">   24</a></span><span class="preprocessor">#define MODBUS_MASTER_DEBUG_PRINT 1</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a78d79089a0726f523335add5e5845b02">   27</a></span><span class="preprocessor">#define MODBUS_MASTER_PDU_MAX 253</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a7841f4dea981557cea151cfd1e7b91d2">   29</a></span><span class="preprocessor">#define MODBUS_MASTER_MAX_SLAVE_NUM 255</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934">   32</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934aa30736dcf3e3507bb2acda01bc0918de">   34</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934aa30736dcf3e3507bb2acda01bc0918de">MODBUS_MASTER_HOLDING_REG</a>,        </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934aad3026f00bfd733a10bc4a968777f6f2">   35</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934aad3026f00bfd733a10bc4a968777f6f2">MODBUS_MASTER_INPUT_REG</a>,          </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934af13575b77423a85e07b0eb85ba863bb1">   36</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934af13575b77423a85e07b0eb85ba863bb1">MODBUS_MASTER_COIL_STATUS_REG</a>,    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934ade4f6ff7f49fc1e6791e78bb04951810">   37</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934ade4f6ff7f49fc1e6791e78bb04951810">MODBUS_MASTER_INPUT_STATUS_REG</a>,   </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <a class="code hl_enumeration" href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934">MODBUS_MASTER_REG_TYPE_E</a>;</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9">   41</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9aeb0252aae2cb9844d07d78dbc2fdc3db">   43</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9aeb0252aae2cb9844d07d78dbc2fdc3db">MODBUS_MASTER_FILP_0</a> = 0,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9a1d7eb8c6af2fe65922f9597dafc25494">   44</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9a1d7eb8c6af2fe65922f9597dafc25494">MODBUS_MASTER_FILP_2</a> = 2,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9ad7a99562e81aa3ec888438f155cdc0d0">   45</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9ad7a99562e81aa3ec888438f155cdc0d0">MODBUS_MASTER_FILP_4</a> = 4,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9ae90091a74ad36c59a9b203cdc60c1e38">   46</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9ae90091a74ad36c59a9b203cdc60c1e38">MODBUS_MASTER_FILP_8</a> = 8,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <a class="code hl_enumeration" href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9">MODBUS_MASTER_REG_FILP_STEP_E</a>;</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21">   49</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21a56bfc0442fabf0d3574643846c57338e">   51</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21a56bfc0442fabf0d3574643846c57338e">MODBUS_MASTER_RTU_RS232</a> = 0,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21a26b2a80877f44dc9f16699a55c5e8241">   52</a></span>        <a class="code hl_enumvalue" href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21a26b2a80877f44dc9f16699a55c5e8241">MODBUS_MASTER_RTU_RS485</a> = 1,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}<a class="code hl_enumeration" href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21">MODBUS_MASTER_RTU_SERIAL_MODE_E</a>;</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif   </span><span class="comment">// MODBUS_MASTER_CFG_H</span></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a3b6f1dbfb470043878812af8b71ebe21"><div class="ttname"><a href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21">MODBUS_MASTER_RTU_SERIAL_MODE_E</a></div><div class="ttdeci">MODBUS_MASTER_RTU_SERIAL_MODE_E</div><div class="ttdef"><b>定义</b> <a href="#l00049">modbus_master_cfg.h:50</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a3b6f1dbfb470043878812af8b71ebe21a26b2a80877f44dc9f16699a55c5e8241"><div class="ttname"><a href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21a26b2a80877f44dc9f16699a55c5e8241">MODBUS_MASTER_RTU_RS485</a></div><div class="ttdeci">@ MODBUS_MASTER_RTU_RS485</div><div class="ttdef"><b>定义</b> <a href="#l00052">modbus_master_cfg.h:52</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a3b6f1dbfb470043878812af8b71ebe21a56bfc0442fabf0d3574643846c57338e"><div class="ttname"><a href="modbus__master__cfg_8h.html#a3b6f1dbfb470043878812af8b71ebe21a56bfc0442fabf0d3574643846c57338e">MODBUS_MASTER_RTU_RS232</a></div><div class="ttdeci">@ MODBUS_MASTER_RTU_RS232</div><div class="ttdef"><b>定义</b> <a href="#l00051">modbus_master_cfg.h:51</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a897c4ce99ecc94f568610396e3fa0934"><div class="ttname"><a href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934">MODBUS_MASTER_REG_TYPE_E</a></div><div class="ttdeci">MODBUS_MASTER_REG_TYPE_E</div><div class="ttdef"><b>定义</b> <a href="#l00032">modbus_master_cfg.h:33</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a897c4ce99ecc94f568610396e3fa0934aa30736dcf3e3507bb2acda01bc0918de"><div class="ttname"><a href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934aa30736dcf3e3507bb2acda01bc0918de">MODBUS_MASTER_HOLDING_REG</a></div><div class="ttdeci">@ MODBUS_MASTER_HOLDING_REG</div><div class="ttdef"><b>定义</b> <a href="#l00034">modbus_master_cfg.h:34</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a897c4ce99ecc94f568610396e3fa0934aad3026f00bfd733a10bc4a968777f6f2"><div class="ttname"><a href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934aad3026f00bfd733a10bc4a968777f6f2">MODBUS_MASTER_INPUT_REG</a></div><div class="ttdeci">@ MODBUS_MASTER_INPUT_REG</div><div class="ttdef"><b>定义</b> <a href="#l00035">modbus_master_cfg.h:35</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a897c4ce99ecc94f568610396e3fa0934ade4f6ff7f49fc1e6791e78bb04951810"><div class="ttname"><a href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934ade4f6ff7f49fc1e6791e78bb04951810">MODBUS_MASTER_INPUT_STATUS_REG</a></div><div class="ttdeci">@ MODBUS_MASTER_INPUT_STATUS_REG</div><div class="ttdef"><b>定义</b> <a href="#l00037">modbus_master_cfg.h:37</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a897c4ce99ecc94f568610396e3fa0934af13575b77423a85e07b0eb85ba863bb1"><div class="ttname"><a href="modbus__master__cfg_8h.html#a897c4ce99ecc94f568610396e3fa0934af13575b77423a85e07b0eb85ba863bb1">MODBUS_MASTER_COIL_STATUS_REG</a></div><div class="ttdeci">@ MODBUS_MASTER_COIL_STATUS_REG</div><div class="ttdef"><b>定义</b> <a href="#l00036">modbus_master_cfg.h:36</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a9fba4491bd3f1fecd4895de0544706b9"><div class="ttname"><a href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9">MODBUS_MASTER_REG_FILP_STEP_E</a></div><div class="ttdeci">MODBUS_MASTER_REG_FILP_STEP_E</div><div class="ttdef"><b>定义</b> <a href="#l00041">modbus_master_cfg.h:42</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a9fba4491bd3f1fecd4895de0544706b9a1d7eb8c6af2fe65922f9597dafc25494"><div class="ttname"><a href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9a1d7eb8c6af2fe65922f9597dafc25494">MODBUS_MASTER_FILP_2</a></div><div class="ttdeci">@ MODBUS_MASTER_FILP_2</div><div class="ttdef"><b>定义</b> <a href="#l00044">modbus_master_cfg.h:44</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a9fba4491bd3f1fecd4895de0544706b9ad7a99562e81aa3ec888438f155cdc0d0"><div class="ttname"><a href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9ad7a99562e81aa3ec888438f155cdc0d0">MODBUS_MASTER_FILP_4</a></div><div class="ttdeci">@ MODBUS_MASTER_FILP_4</div><div class="ttdef"><b>定义</b> <a href="#l00045">modbus_master_cfg.h:45</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a9fba4491bd3f1fecd4895de0544706b9ae90091a74ad36c59a9b203cdc60c1e38"><div class="ttname"><a href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9ae90091a74ad36c59a9b203cdc60c1e38">MODBUS_MASTER_FILP_8</a></div><div class="ttdeci">@ MODBUS_MASTER_FILP_8</div><div class="ttdef"><b>定义</b> <a href="#l00046">modbus_master_cfg.h:46</a></div></div>
+<div class="ttc" id="amodbus__master__cfg_8h_html_a9fba4491bd3f1fecd4895de0544706b9aeb0252aae2cb9844d07d78dbc2fdc3db"><div class="ttname"><a href="modbus__master__cfg_8h.html#a9fba4491bd3f1fecd4895de0544706b9aeb0252aae2cb9844d07d78dbc2fdc3db">MODBUS_MASTER_FILP_0</a></div><div class="ttdeci">@ MODBUS_MASTER_FILP_0</div><div class="ttdef"><b>定义</b> <a href="#l00043">modbus_master_cfg.h:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

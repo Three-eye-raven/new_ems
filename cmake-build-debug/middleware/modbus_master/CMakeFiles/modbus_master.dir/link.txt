@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../build/lib/libmodbus_master.a  CMakeFiles/modbus_master.dir/modbus_master_data_interaction.c.o CMakeFiles/modbus_master.dir/modbus_master_reconnect.c.o CMakeFiles/modbus_master.dir/modbus_master_rtu_init.c.o CMakeFiles/modbus_master.dir/modbus_master_tcp_init.c.o
+/usr/bin/ranlib ../../../build/lib/libmodbus_master.a

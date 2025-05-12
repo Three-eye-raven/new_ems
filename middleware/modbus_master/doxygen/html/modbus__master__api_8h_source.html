@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modbus master: modbus_master_api.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">modbus master
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">modbus_master_api.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="modbus__master__api_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef MODBUS_MASTER_API_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define MODBUS_MASTER_API_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="modbus__master__struct_8h.html">modbus_master_struct.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">bool</span> <a class="code hl_function" href="modbus__master__api_8h.html#a2aba8f02d5b317d4a69f31b4e17f2bbb">modbus_master_tcp_channel_init</a>(<a class="code hl_struct" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a>* pChannel);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="modbus__master__api_8h.html#a200fddf818565d45e3e0a1bb28f5245e">modbus_master_tcp_channel_deinit</a>(<a class="code hl_struct" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a>* pChannel);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">bool</span> <a class="code hl_function" href="modbus__master__api_8h.html#a3458a9e4ba5d7fbd4bb0b28e58d0379b">modbus_master_rtu_channel_init</a>(<a class="code hl_struct" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a>* pChannel);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="modbus__master__api_8h.html#aa4fe2c55d70a02015c1af310544c7314">modbus_master_rtu_channel_deinit</a>(<a class="code hl_struct" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a>* pChannel);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">bool</span> <a class="code hl_function" href="modbus__master__api_8h.html#af4127cf77d2c7eaa1cddf5ac09d4153c">modbus_master_channel_reconnect</a>(<a class="code hl_struct" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a>* pChannel_info);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>uint8_t <a class="code hl_function" href="modbus__master__api_8h.html#aa8bc06ebc60afdc11a36a01b8751b660">modbus_master_slave_readable_infos_sync</a>(<a class="code hl_struct" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a>* pChannel,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                                <span class="keyword">const</span> uint8_t              slaveIdx);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>uint8_t <a class="code hl_function" href="modbus__master__api_8h.html#a51e129a4ac5e21ccc0adfd20f8f7c9a2">modbus_master_slave_writable_infos_sync</a>(<a class="code hl_struct" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a>* pChannel,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                                                <span class="keyword">const</span> uint8_t              slaveIdx);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif   </span><span class="comment">// MODBUS_MASTER_API_H</span></div>
+<div class="ttc" id="amodbus__master__api_8h_html_a200fddf818565d45e3e0a1bb28f5245e"><div class="ttname"><a href="modbus__master__api_8h.html#a200fddf818565d45e3e0a1bb28f5245e">modbus_master_tcp_channel_deinit</a></div><div class="ttdeci">void modbus_master_tcp_channel_deinit(ModbusMasterTcpChannel_T *pChannel)</div><div class="ttdoc">反初始化</div><div class="ttdef"><b>定义</b> <a href="modbus__master__tcp__init_8c_source.html#l00183">modbus_master_tcp_init.c:183</a></div></div>
+<div class="ttc" id="amodbus__master__api_8h_html_a2aba8f02d5b317d4a69f31b4e17f2bbb"><div class="ttname"><a href="modbus__master__api_8h.html#a2aba8f02d5b317d4a69f31b4e17f2bbb">modbus_master_tcp_channel_init</a></div><div class="ttdeci">bool modbus_master_tcp_channel_init(ModbusMasterTcpChannel_T *pChannel)</div><div class="ttdoc">初始化</div><div class="ttdef"><b>定义</b> <a href="modbus__master__tcp__init_8c_source.html#l00129">modbus_master_tcp_init.c:129</a></div></div>
+<div class="ttc" id="amodbus__master__api_8h_html_a3458a9e4ba5d7fbd4bb0b28e58d0379b"><div class="ttname"><a href="modbus__master__api_8h.html#a3458a9e4ba5d7fbd4bb0b28e58d0379b">modbus_master_rtu_channel_init</a></div><div class="ttdeci">bool modbus_master_rtu_channel_init(ModbusMasterRtuChannel_T *pChannel)</div><div class="ttdoc">初始化</div><div class="ttdef"><b>定义</b> <a href="modbus__master__rtu__init_8c_source.html#l00100">modbus_master_rtu_init.c:100</a></div></div>
+<div class="ttc" id="amodbus__master__api_8h_html_a51e129a4ac5e21ccc0adfd20f8f7c9a2"><div class="ttname"><a href="modbus__master__api_8h.html#a51e129a4ac5e21ccc0adfd20f8f7c9a2">modbus_master_slave_writable_infos_sync</a></div><div class="ttdeci">uint8_t modbus_master_slave_writable_infos_sync(ModbusMasterChannelInfo_T *pChannel, const uint8_t slaveIdx)</div><div class="ttdoc">同步从设备所有的可写信息</div><div class="ttdef"><b>定义</b> <a href="modbus__master__data__interaction_8c_source.html#l00544">modbus_master_data_interaction.c:544</a></div></div>
+<div class="ttc" id="amodbus__master__api_8h_html_aa4fe2c55d70a02015c1af310544c7314"><div class="ttname"><a href="modbus__master__api_8h.html#aa4fe2c55d70a02015c1af310544c7314">modbus_master_rtu_channel_deinit</a></div><div class="ttdeci">void modbus_master_rtu_channel_deinit(ModbusMasterRtuChannel_T *pChannel)</div><div class="ttdoc">反初始化</div><div class="ttdef"><b>定义</b> <a href="modbus__master__rtu__init_8c_source.html#l00159">modbus_master_rtu_init.c:159</a></div></div>
+<div class="ttc" id="amodbus__master__api_8h_html_aa8bc06ebc60afdc11a36a01b8751b660"><div class="ttname"><a href="modbus__master__api_8h.html#aa8bc06ebc60afdc11a36a01b8751b660">modbus_master_slave_readable_infos_sync</a></div><div class="ttdeci">uint8_t modbus_master_slave_readable_infos_sync(ModbusMasterChannelInfo_T *pChannel, const uint8_t slaveIdx)</div><div class="ttdoc">同步从设备所有的可读信息</div><div class="ttdef"><b>定义</b> <a href="modbus__master__data__interaction_8c_source.html#l00447">modbus_master_data_interaction.c:447</a></div></div>
+<div class="ttc" id="amodbus__master__api_8h_html_af4127cf77d2c7eaa1cddf5ac09d4153c"><div class="ttname"><a href="modbus__master__api_8h.html#af4127cf77d2c7eaa1cddf5ac09d4153c">modbus_master_channel_reconnect</a></div><div class="ttdeci">bool modbus_master_channel_reconnect(ModbusMasterChannelInfo_T *pChannel_info)</div><div class="ttdoc">通道重连</div><div class="ttdef"><b>定义</b> <a href="modbus__master__reconnect_8c_source.html#l00025">modbus_master_reconnect.c:25</a></div></div>
+<div class="ttc" id="amodbus__master__struct_8h_html"><div class="ttname"><a href="modbus__master__struct_8h.html">modbus_master_struct.h</a></div><div class="ttdoc">modbus master 数据结构</div></div>
+<div class="ttc" id="astruct_modbus_master_channel_info___t_html"><div class="ttname"><a href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a></div><div class="ttdoc">通道信息</div><div class="ttdef"><b>定义</b> <a href="modbus__master__struct_8h_source.html#l00134">modbus_master_struct.h:135</a></div></div>
+<div class="ttc" id="astruct_modbus_master_rtu_channel___t_html"><div class="ttname"><a href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a></div><div class="ttdoc">rtu通道</div><div class="ttdef"><b>定义</b> <a href="modbus__master__struct_8h_source.html#l00168">modbus_master_struct.h:169</a></div></div>
+<div class="ttc" id="astruct_modbus_master_tcp_channel___t_html"><div class="ttname"><a href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a></div><div class="ttdoc">tcp通道</div><div class="ttdef"><b>定义</b> <a href="modbus__master__struct_8h_source.html#l00177">modbus_master_struct.h:178</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

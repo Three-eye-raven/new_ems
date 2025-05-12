@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../build/lib/libmodbus_slave.a  CMakeFiles/modbus_slave.dir/modbus_slave_mapping.c.o CMakeFiles/modbus_slave.dir/modbus_slave_spmc.c.o
+/usr/bin/ranlib ../../../build/lib/libmodbus_slave.a

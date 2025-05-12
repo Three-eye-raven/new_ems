@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../build/lib/libpvpcs_data_interaction.a  CMakeFiles/pvpcs_data_interaction.dir/pvpcs_data_interaction.c.o
+/usr/bin/ranlib ../../../../build/lib/libpvpcs_data_interaction.a

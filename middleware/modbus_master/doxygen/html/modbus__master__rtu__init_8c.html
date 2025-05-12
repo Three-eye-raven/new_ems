@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modbus master: modbus_master_rtu_init.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">modbus master
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">modbus_master_rtu_init.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>modbus master rtu 通道初始化  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;modbus.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="modbus__master__api_8h_source.html">modbus_master_api.h</a>&quot;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+</div>
+<p><a href="modbus__master__rtu__init_8c_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a49908d248fd274c3e86776120424c1bb" id="r_a49908d248fd274c3e86776120424c1bb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49908d248fd274c3e86776120424c1bb">path_exists</a> (const char *pPath)</td></tr>
+<tr class="memdesc:a49908d248fd274c3e86776120424c1bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">在linux系统中，判断路径是否存在  <br /></td></tr>
+<tr class="separator:a49908d248fd274c3e86776120424c1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e38e95c4e18ca27d840ac6b05e6813" id="r_a51e38e95c4e18ca27d840ac6b05e6813"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51e38e95c4e18ca27d840ac6b05e6813">parity_check</a> (const char parity)</td></tr>
+<tr class="memdesc:a51e38e95c4e18ca27d840ac6b05e6813"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断串口配置的奇偶校验位是否合法  <br /></td></tr>
+<tr class="separator:a51e38e95c4e18ca27d840ac6b05e6813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc959976cdcac92674bdfd0558c1690" id="r_a1dc959976cdcac92674bdfd0558c1690"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dc959976cdcac92674bdfd0558c1690">modbus_master_rtu_channel_serial_info_check</a> (<a class="el" href="struct_modbus_master_serial_info___t.html">ModbusMasterSerialInfo_T</a> *pConfig, char *pChannelName)</td></tr>
+<tr class="memdesc:a1dc959976cdcac92674bdfd0558c1690"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断串口配置是否合法  <br /></td></tr>
+<tr class="separator:a1dc959976cdcac92674bdfd0558c1690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3458a9e4ba5d7fbd4bb0b28e58d0379b" id="r_a3458a9e4ba5d7fbd4bb0b28e58d0379b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3458a9e4ba5d7fbd4bb0b28e58d0379b">modbus_master_rtu_channel_init</a> (<a class="el" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a> *pChannel)</td></tr>
+<tr class="memdesc:a3458a9e4ba5d7fbd4bb0b28e58d0379b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <br /></td></tr>
+<tr class="separator:a3458a9e4ba5d7fbd4bb0b28e58d0379b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fe2c55d70a02015c1af310544c7314" id="r_aa4fe2c55d70a02015c1af310544c7314"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4fe2c55d70a02015c1af310544c7314">modbus_master_rtu_channel_deinit</a> (<a class="el" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a> *pChannel)</td></tr>
+<tr class="memdesc:aa4fe2c55d70a02015c1af310544c7314"><td class="mdescLeft">&#160;</td><td class="mdescRight">反初始化  <br /></td></tr>
+<tr class="separator:aa4fe2c55d70a02015c1af310544c7314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>modbus master rtu 通道初始化 </p>
+<p>包含设备路径检查和串口配置参数检查，libmodbus句柄申请 </p><dl class="section author"><dt>作者</dt><dd>ylb </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025-04-25 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section user"><dt>History:</dt><dd>version v1.0: 基础程序首次创建<br  />
+</dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__rtu__init_8c_source.html">modbus_master_rtu_init.c</a> 中定义.</p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="aa4fe2c55d70a02015c1af310544c7314" name="aa4fe2c55d70a02015c1af310544c7314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fe2c55d70a02015c1af310544c7314">&#9670;&#160;</a></span>modbus_master_rtu_channel_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void modbus_master_rtu_channel_deinit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>反初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>Rtu 类型通道 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__rtu__init_8c_source.html">modbus_master_rtu_init.c</a> 第 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00159">159</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00171">ModbusMasterRtuChannel_T::channelInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>.</p>
+
+</div>
+</div>
+<a id="a3458a9e4ba5d7fbd4bb0b28e58d0379b" name="a3458a9e4ba5d7fbd4bb0b28e58d0379b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3458a9e4ba5d7fbd4bb0b28e58d0379b">&#9670;&#160;</a></span>modbus_master_rtu_channel_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool modbus_master_rtu_channel_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>Rtu 类型通道</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>初始化结果，若为true则表示成功，false表示失败 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__rtu__init_8c_source.html">modbus_master_rtu_init.c</a> 第 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00100">100</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00149">ModbusMasterSerialInfo_T::baud</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00171">ModbusMasterRtuChannel_T::channelInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00170">ModbusMasterRtuChannel_T::config</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00151">ModbusMasterSerialInfo_T::dataBit</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__rtu__init_8c_source.html#l00057">modbus_master_rtu_channel_serial_info_check()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00150">ModbusMasterSerialInfo_T::parity</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00148">ModbusMasterSerialInfo_T::serialName</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00152">ModbusMasterSerialInfo_T::stopBit</a>.</p>
+
+</div>
+</div>
+<a id="a1dc959976cdcac92674bdfd0558c1690" name="a1dc959976cdcac92674bdfd0558c1690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc959976cdcac92674bdfd0558c1690">&#9670;&#160;</a></span>modbus_master_rtu_channel_serial_info_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t modbus_master_rtu_channel_serial_info_check </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_serial_info___t.html">ModbusMasterSerialInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pConfig</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>pChannelName</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断串口配置是否合法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pConfig</td><td>串口配置 </td></tr>
+    <tr><td class="paramname">pChannelName</td><td>通道名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回0表示检查通过，配置信息合法； bit0置位表示配置文件信息指针为空 bit1置位表示路径不存在 bit2置位表示奇偶校验位错误 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__rtu__init_8c_source.html">modbus_master_rtu_init.c</a> 第 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00057">57</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00150">ModbusMasterSerialInfo_T::parity</a>, <a class="el" href="modbus__master__rtu__init_8c_source.html#l00038">parity_check()</a>, <a class="el" href="modbus__master__rtu__init_8c_source.html#l00026">path_exists()</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00148">ModbusMasterSerialInfo_T::serialName</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00100">modbus_master_rtu_channel_init()</a>.</p>
+
+</div>
+</div>
+<a id="a51e38e95c4e18ca27d840ac6b05e6813" name="a51e38e95c4e18ca27d840ac6b05e6813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e38e95c4e18ca27d840ac6b05e6813">&#9670;&#160;</a></span>parity_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool parity_check </td>
+          <td>(</td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>parity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断串口配置的奇偶校验位是否合法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parity</td><td>奇偶校验位</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>合法则返回true,不合法则返回false </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__rtu__init_8c_source.html">modbus_master_rtu_init.c</a> 第 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00038">38</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00057">modbus_master_rtu_channel_serial_info_check()</a>.</p>
+
+</div>
+</div>
+<a id="a49908d248fd274c3e86776120424c1bb" name="a49908d248fd274c3e86776120424c1bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49908d248fd274c3e86776120424c1bb">&#9670;&#160;</a></span>path_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool path_exists </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>pPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在linux系统中，判断路径是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pPath</td><td>绝对路径</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>路径存在返回true,不存在返回false </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__rtu__init_8c_source.html">modbus_master_rtu_init.c</a> 第 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00026">26</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00057">modbus_master_rtu_channel_serial_info_check()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modbus master: modbus_master_api.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">modbus master
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">modbus_master_api.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>modbus master 函数接口声明  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="modbus__master__struct_8h_source.html">modbus_master_struct.h</a>&quot;</code><br />
+</div>
+<p><a href="modbus__master__api_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a2aba8f02d5b317d4a69f31b4e17f2bbb" id="r_a2aba8f02d5b317d4a69f31b4e17f2bbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aba8f02d5b317d4a69f31b4e17f2bbb">modbus_master_tcp_channel_init</a> (<a class="el" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a> *pChannel)</td></tr>
+<tr class="memdesc:a2aba8f02d5b317d4a69f31b4e17f2bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <br /></td></tr>
+<tr class="separator:a2aba8f02d5b317d4a69f31b4e17f2bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200fddf818565d45e3e0a1bb28f5245e" id="r_a200fddf818565d45e3e0a1bb28f5245e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a200fddf818565d45e3e0a1bb28f5245e">modbus_master_tcp_channel_deinit</a> (<a class="el" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a> *pChannel)</td></tr>
+<tr class="memdesc:a200fddf818565d45e3e0a1bb28f5245e"><td class="mdescLeft">&#160;</td><td class="mdescRight">反初始化  <br /></td></tr>
+<tr class="separator:a200fddf818565d45e3e0a1bb28f5245e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3458a9e4ba5d7fbd4bb0b28e58d0379b" id="r_a3458a9e4ba5d7fbd4bb0b28e58d0379b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3458a9e4ba5d7fbd4bb0b28e58d0379b">modbus_master_rtu_channel_init</a> (<a class="el" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a> *pChannel)</td></tr>
+<tr class="memdesc:a3458a9e4ba5d7fbd4bb0b28e58d0379b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <br /></td></tr>
+<tr class="separator:a3458a9e4ba5d7fbd4bb0b28e58d0379b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fe2c55d70a02015c1af310544c7314" id="r_aa4fe2c55d70a02015c1af310544c7314"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4fe2c55d70a02015c1af310544c7314">modbus_master_rtu_channel_deinit</a> (<a class="el" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a> *pChannel)</td></tr>
+<tr class="memdesc:aa4fe2c55d70a02015c1af310544c7314"><td class="mdescLeft">&#160;</td><td class="mdescRight">反初始化  <br /></td></tr>
+<tr class="separator:aa4fe2c55d70a02015c1af310544c7314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4127cf77d2c7eaa1cddf5ac09d4153c" id="r_af4127cf77d2c7eaa1cddf5ac09d4153c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4127cf77d2c7eaa1cddf5ac09d4153c">modbus_master_channel_reconnect</a> (<a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *pChannel_info)</td></tr>
+<tr class="memdesc:af4127cf77d2c7eaa1cddf5ac09d4153c"><td class="mdescLeft">&#160;</td><td class="mdescRight">通道重连  <br /></td></tr>
+<tr class="separator:af4127cf77d2c7eaa1cddf5ac09d4153c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bc06ebc60afdc11a36a01b8751b660" id="r_aa8bc06ebc60afdc11a36a01b8751b660"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8bc06ebc60afdc11a36a01b8751b660">modbus_master_slave_readable_infos_sync</a> (<a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *pChannel, const uint8_t slaveIdx)</td></tr>
+<tr class="memdesc:aa8bc06ebc60afdc11a36a01b8751b660"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步从设备所有的可读信息  <br /></td></tr>
+<tr class="separator:aa8bc06ebc60afdc11a36a01b8751b660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e129a4ac5e21ccc0adfd20f8f7c9a2" id="r_a51e129a4ac5e21ccc0adfd20f8f7c9a2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51e129a4ac5e21ccc0adfd20f8f7c9a2">modbus_master_slave_writable_infos_sync</a> (<a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *pChannel, const uint8_t slaveIdx)</td></tr>
+<tr class="memdesc:a51e129a4ac5e21ccc0adfd20f8f7c9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步从设备所有的可写信息  <br /></td></tr>
+<tr class="separator:a51e129a4ac5e21ccc0adfd20f8f7c9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>modbus master 函数接口声明 </p>
+<p>包含rtu、tcp信道的初始化、重连、反初始化，读写数据的同步 </p><dl class="section author"><dt>作者</dt><dd>ylb </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025-04-25 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section user"><dt>History:</dt><dd>version v1.0: 基础程序首次创建<br  />
+</dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__api_8h_source.html">modbus_master_api.h</a> 中定义.</p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="af4127cf77d2c7eaa1cddf5ac09d4153c" name="af4127cf77d2c7eaa1cddf5ac09d4153c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4127cf77d2c7eaa1cddf5ac09d4153c">&#9670;&#160;</a></span>modbus_master_channel_reconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool modbus_master_channel_reconnect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel_info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通道重连 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel_info</td><td>通道信息</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>重连结果，若为true则表示成功，false表示失败 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__reconnect_8c_source.html">modbus_master_reconnect.c</a> 第 <a class="el" href="modbus__master__reconnect_8c_source.html#l00025">25</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>.</p>
+
+</div>
+</div>
+<a id="aa4fe2c55d70a02015c1af310544c7314" name="aa4fe2c55d70a02015c1af310544c7314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fe2c55d70a02015c1af310544c7314">&#9670;&#160;</a></span>modbus_master_rtu_channel_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void modbus_master_rtu_channel_deinit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>反初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>Rtu 类型通道 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__rtu__init_8c_source.html">modbus_master_rtu_init.c</a> 第 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00159">159</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00171">ModbusMasterRtuChannel_T::channelInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>.</p>
+
+</div>
+</div>
+<a id="a3458a9e4ba5d7fbd4bb0b28e58d0379b" name="a3458a9e4ba5d7fbd4bb0b28e58d0379b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3458a9e4ba5d7fbd4bb0b28e58d0379b">&#9670;&#160;</a></span>modbus_master_rtu_channel_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool modbus_master_rtu_channel_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_rtu_channel___t.html">ModbusMasterRtuChannel_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>Rtu 类型通道</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>初始化结果，若为true则表示成功，false表示失败 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__rtu__init_8c_source.html">modbus_master_rtu_init.c</a> 第 <a class="el" href="modbus__master__rtu__init_8c_source.html#l00100">100</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00149">ModbusMasterSerialInfo_T::baud</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00171">ModbusMasterRtuChannel_T::channelInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00170">ModbusMasterRtuChannel_T::config</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00151">ModbusMasterSerialInfo_T::dataBit</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__rtu__init_8c_source.html#l00057">modbus_master_rtu_channel_serial_info_check()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00150">ModbusMasterSerialInfo_T::parity</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00148">ModbusMasterSerialInfo_T::serialName</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00152">ModbusMasterSerialInfo_T::stopBit</a>.</p>
+
+</div>
+</div>
+<a id="aa8bc06ebc60afdc11a36a01b8751b660" name="aa8bc06ebc60afdc11a36a01b8751b660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8bc06ebc60afdc11a36a01b8751b660">&#9670;&#160;</a></span>modbus_master_slave_readable_infos_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t modbus_master_slave_readable_infos_sync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveIdx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同步从设备所有的可读信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>通讯通道 </td></tr>
+    <tr><td class="paramname">slaveIdx</td><td>从设备索引号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ret的内容按照bit位来表示同步结果，若同步无异常，ret = 0； bit0:pCtx为空； bit1:slaveIdx越界 bit2:未绑定协议表 bit3:协议表不完整，缺失读取内容 bit4:通道未初始化 bit5:协议表内容不一致 bit6:读取失败</dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00447">447</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00113">ModbusMasterDeviceLinkState_T::connected</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00125">ModbusMasterSlaveInfo_T::deviceId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00077">ModbusMasterProtocolTime_T::frameInterval</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">get_timestamp_ms()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00115">ModbusMasterDeviceLinkState_T::lastHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00127">ModbusMasterSlaveInfo_T::linkState</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00369">modbus_master_set_slave_offline()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00401">modbus_master_set_slave_online()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00152">modbus_master_slave_register_info_read()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00121">msleep()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00116">ModbusMasterDeviceLinkState_T::nextHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00128">ModbusMasterSlaveInfo_T::pProtocol</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00100">ModbusMasterDataProtocol_T::pReadableSyncInfos</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00101">ModbusMasterDataProtocol_T::readableSyncInfosNum</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00126">ModbusMasterSlaveInfo_T::slaveId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00139">ModbusMasterChannelInfo_T::slaveInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00138">ModbusMasterChannelInfo_T::slaveNum</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00104">ModbusMasterDataProtocol_T::time</a>.</p>
+
+</div>
+</div>
+<a id="a51e129a4ac5e21ccc0adfd20f8f7c9a2" name="a51e129a4ac5e21ccc0adfd20f8f7c9a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e129a4ac5e21ccc0adfd20f8f7c9a2">&#9670;&#160;</a></span>modbus_master_slave_writable_infos_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t modbus_master_slave_writable_infos_sync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_channel_info___t.html">ModbusMasterChannelInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveIdx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同步从设备所有的可写信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>通讯通道 </td></tr>
+    <tr><td class="paramname">slaveIdx</td><td>从设备索引号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ret的内容按照bit位来表示同步结果，若同步无异常，ret = 0； bit0:pCtx为空； bit1:slaveIdx越界 bit2:未绑定协议表 bit3:协议表不完整，缺失读取内容 bit4:通道未初始化 bit5:协议表内容不一致 bit6:写入失败</dd></dl>
+<dl class="section user"><dt>修改日志</dt><dd>ylb于2025-04-25创建 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__data__interaction_8c_source.html">modbus_master_data_interaction.c</a> 第 <a class="el" href="modbus__master__data__interaction_8c_source.html#l00544">544</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00113">ModbusMasterDeviceLinkState_T::connected</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00125">ModbusMasterSlaveInfo_T::deviceId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00077">ModbusMasterProtocolTime_T::frameInterval</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00038">get_timestamp_ms()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00115">ModbusMasterDeviceLinkState_T::lastHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00127">ModbusMasterSlaveInfo_T::linkState</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00369">modbus_master_set_slave_offline()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00401">modbus_master_set_slave_online()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00265">modbus_master_slave_register_info_write()</a>, <a class="el" href="modbus__master__data__interaction_8c_source.html#l00121">msleep()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00116">ModbusMasterDeviceLinkState_T::nextHandshakeTime</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00128">ModbusMasterSlaveInfo_T::pProtocol</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00102">ModbusMasterDataProtocol_T::pWritableSyncInfos</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00126">ModbusMasterSlaveInfo_T::slaveId</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00139">ModbusMasterChannelInfo_T::slaveInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00138">ModbusMasterChannelInfo_T::slaveNum</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00104">ModbusMasterDataProtocol_T::time</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00103">ModbusMasterDataProtocol_T::writableSyncInfosNum</a>.</p>
+
+</div>
+</div>
+<a id="a200fddf818565d45e3e0a1bb28f5245e" name="a200fddf818565d45e3e0a1bb28f5245e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a200fddf818565d45e3e0a1bb28f5245e">&#9670;&#160;</a></span>modbus_master_tcp_channel_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void modbus_master_tcp_channel_deinit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>反初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>Tcp 类型通道 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__tcp__init_8c_source.html">modbus_master_tcp_init.c</a> 第 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00183">183</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00180">ModbusMasterTcpChannel_T::channelInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>.</p>
+
+</div>
+</div>
+<a id="a2aba8f02d5b317d4a69f31b4e17f2bbb" name="a2aba8f02d5b317d4a69f31b4e17f2bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aba8f02d5b317d4a69f31b4e17f2bbb">&#9670;&#160;</a></span>modbus_master_tcp_channel_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool modbus_master_tcp_channel_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>Tcp 类型通道</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>初始化结果，若为true则表示成功，false表示失败 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__tcp__init_8c_source.html">modbus_master_tcp_init.c</a> 第 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00129">129</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00180">ModbusMasterTcpChannel_T::channelInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00179">ModbusMasterTcpChannel_T::config</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00161">ModbusMasterTcpInfo_T::ipv4</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__tcp__init_8c_source.html#l00090">modbus_master_tcp_channel_config_check()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00162">ModbusMasterTcpInfo_T::port</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

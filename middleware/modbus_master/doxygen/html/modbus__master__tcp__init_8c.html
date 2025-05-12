@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modbus master: modbus_master_tcp_init.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">modbus master
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">modbus_master_tcp_init.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>modbus master tcp通道初始化函数  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;modbus.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="modbus__master__api_8h_source.html">modbus_master_api.h</a>&quot;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div>
+<p><a href="modbus__master__tcp__init_8c_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:af58b9e6066096995ffe3f9d45b258362" id="r_af58b9e6066096995ffe3f9d45b258362"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58b9e6066096995ffe3f9d45b258362">is_valid_ipv4</a> (const char *pIp)</td></tr>
+<tr class="memdesc:af58b9e6066096995ffe3f9d45b258362"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断ipv4地址字符串是否合法  <br /></td></tr>
+<tr class="separator:af58b9e6066096995ffe3f9d45b258362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70017f01d6e767188acc376e6cb65ae3" id="r_a70017f01d6e767188acc376e6cb65ae3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70017f01d6e767188acc376e6cb65ae3">is_valid_port</a> (const int port)</td></tr>
+<tr class="memdesc:a70017f01d6e767188acc376e6cb65ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断端口号是否合法  <br /></td></tr>
+<tr class="separator:a70017f01d6e767188acc376e6cb65ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b86bb742bba66cc7e89e375553eadc" id="r_a93b86bb742bba66cc7e89e375553eadc"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93b86bb742bba66cc7e89e375553eadc">modbus_master_tcp_channel_config_check</a> (const <a class="el" href="struct_modbus_master_tcp_info___t.html">ModbusMasterTcpInfo_T</a> *pConfig, char *pChannelName)</td></tr>
+<tr class="memdesc:a93b86bb742bba66cc7e89e375553eadc"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断ip配置是否合法  <br /></td></tr>
+<tr class="separator:a93b86bb742bba66cc7e89e375553eadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aba8f02d5b317d4a69f31b4e17f2bbb" id="r_a2aba8f02d5b317d4a69f31b4e17f2bbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aba8f02d5b317d4a69f31b4e17f2bbb">modbus_master_tcp_channel_init</a> (<a class="el" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a> *pChannel)</td></tr>
+<tr class="memdesc:a2aba8f02d5b317d4a69f31b4e17f2bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <br /></td></tr>
+<tr class="separator:a2aba8f02d5b317d4a69f31b4e17f2bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200fddf818565d45e3e0a1bb28f5245e" id="r_a200fddf818565d45e3e0a1bb28f5245e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a200fddf818565d45e3e0a1bb28f5245e">modbus_master_tcp_channel_deinit</a> (<a class="el" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a> *pChannel)</td></tr>
+<tr class="memdesc:a200fddf818565d45e3e0a1bb28f5245e"><td class="mdescLeft">&#160;</td><td class="mdescRight">反初始化  <br /></td></tr>
+<tr class="separator:a200fddf818565d45e3e0a1bb28f5245e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>modbus master tcp通道初始化函数 </p>
+<p>包含ipv4地址的合法性检查，端口号检查以及libmodbus句柄申请 </p><dl class="section author"><dt>作者</dt><dd>ylb </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025-04-25 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section user"><dt>History:</dt><dd>version v1.0: 基础程序首次创建<br  />
+</dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__tcp__init_8c_source.html">modbus_master_tcp_init.c</a> 中定义.</p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="af58b9e6066096995ffe3f9d45b258362" name="af58b9e6066096995ffe3f9d45b258362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58b9e6066096995ffe3f9d45b258362">&#9670;&#160;</a></span>is_valid_ipv4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool is_valid_ipv4 </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>pIp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断ipv4地址字符串是否合法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIp</td><td>ipv4地址</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>合法则返回true,不合法返回false </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__tcp__init_8c_source.html">modbus_master_tcp_init.c</a> 第 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00027">27</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00090">modbus_master_tcp_channel_config_check()</a>.</p>
+
+</div>
+</div>
+<a id="a70017f01d6e767188acc376e6cb65ae3" name="a70017f01d6e767188acc376e6cb65ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70017f01d6e767188acc376e6cb65ae3">&#9670;&#160;</a></span>is_valid_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool is_valid_port </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>port</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断端口号是否合法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>端口号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>合法则返回true,不合法返回false </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__tcp__init_8c_source.html">modbus_master_tcp_init.c</a> 第 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00075">75</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00090">modbus_master_tcp_channel_config_check()</a>.</p>
+
+</div>
+</div>
+<a id="a93b86bb742bba66cc7e89e375553eadc" name="a93b86bb742bba66cc7e89e375553eadc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b86bb742bba66cc7e89e375553eadc">&#9670;&#160;</a></span>modbus_master_tcp_channel_config_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t modbus_master_tcp_channel_config_check </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_modbus_master_tcp_info___t.html">ModbusMasterTcpInfo_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pConfig</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>pChannelName</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断ip配置是否合法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pConfig</td><td>ip配置 </td></tr>
+    <tr><td class="paramname">pChannelName</td><td>通道名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回0表示检查通过，配置信息合法； bit0置位表示配置文件信息指针为空 bit1置位表示ip地址不合法 bit2置位表示端口号不合法 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__tcp__init_8c_source.html">modbus_master_tcp_init.c</a> 第 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00090">90</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00161">ModbusMasterTcpInfo_T::ipv4</a>, <a class="el" href="modbus__master__tcp__init_8c_source.html#l00027">is_valid_ipv4()</a>, <a class="el" href="modbus__master__tcp__init_8c_source.html#l00075">is_valid_port()</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00162">ModbusMasterTcpInfo_T::port</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00129">modbus_master_tcp_channel_init()</a>.</p>
+
+</div>
+</div>
+<a id="a200fddf818565d45e3e0a1bb28f5245e" name="a200fddf818565d45e3e0a1bb28f5245e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a200fddf818565d45e3e0a1bb28f5245e">&#9670;&#160;</a></span>modbus_master_tcp_channel_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void modbus_master_tcp_channel_deinit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>反初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>Tcp 类型通道 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__tcp__init_8c_source.html">modbus_master_tcp_init.c</a> 第 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00183">183</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00180">ModbusMasterTcpChannel_T::channelInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a>.</p>
+
+</div>
+</div>
+<a id="a2aba8f02d5b317d4a69f31b4e17f2bbb" name="a2aba8f02d5b317d4a69f31b4e17f2bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aba8f02d5b317d4a69f31b4e17f2bbb">&#9670;&#160;</a></span>modbus_master_tcp_channel_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool modbus_master_tcp_channel_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_modbus_master_tcp_channel___t.html">ModbusMasterTcpChannel_T</a> *</td>          <td class="paramname"><span class="paramname"><em>pChannel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pChannel</td><td>Tcp 类型通道</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>初始化结果，若为true则表示成功，false表示失败 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="modbus__master__tcp__init_8c_source.html">modbus_master_tcp_init.c</a> 第 <a class="el" href="modbus__master__tcp__init_8c_source.html#l00129">129</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="modbus__master__struct_8h_source.html#l00180">ModbusMasterTcpChannel_T::channelInfo</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00136">ModbusMasterChannelInfo_T::channelName</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00179">ModbusMasterTcpChannel_T::config</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00137">ModbusMasterChannelInfo_T::initialized</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00161">ModbusMasterTcpInfo_T::ipv4</a>, <a class="el" href="modbus__master__cfg_8h_source.html#l00018">MODBUS_MASTER_INFO_PRINT</a>, <a class="el" href="modbus__master__tcp__init_8c_source.html#l00090">modbus_master_tcp_channel_config_check()</a>, <a class="el" href="modbus__master__struct_8h_source.html#l00140">ModbusMasterChannelInfo_T::pCtx</a> , 以及 <a class="el" href="modbus__master__struct_8h_source.html#l00162">ModbusMasterTcpInfo_T::port</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

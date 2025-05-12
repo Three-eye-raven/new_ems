@@ -1,0 +1,3 @@
+aux_source_directory(. PVPCS_TEST_SOURCES)
+add_library(pvpcs_test STATIC ${PVPCS_TEST_SOURCES})
+target_link_libraries(pvpcs_test pvpcs_sungrow pvpcs_sofar_50kw pvpcs_hw_150kw pvpcs_hw_110kw pvpcs_data_interaction modbus_master)

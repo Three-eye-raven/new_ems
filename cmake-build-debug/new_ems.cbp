@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="new_ems"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\middleware\;CMake Files\middleware\data_sync_spsc\;CMake Files\middleware\modbus_master\;CMake Files\middleware\modbus_slave\;CMake Files\middleware\spmc_lockfree_queue\;CMake Files\app\;CMake Files\app\log_port\;CMake Files\app\atomic_test\;CMake Files\app\pvpcs\;CMake Files\app\pvpcs\pvpcs_data_interaction\;CMake Files\app\pvpcs\pvpcs_hw_110kw\;CMake Files\app\pvpcs\pvpcs_hw_150kw\;CMake Files\app\pvpcs\pvpcs_sofar_50kw\;CMake Files\app\pvpcs\pvpcs_sungrow\;CMake Files\app\pvpcs\pvpcs_data_map\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="new_ems">
+				<Option output="/home/three/code/new_ems/gcc/new_ems" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/../"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 new_ems"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="new_ems/fast">
+				<Option output="/home/three/code/new_ems/gcc/new_ems" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/../"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 new_ems/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="data_sync_spsc">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libdata_sync_spsc.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc/Makefile&quot;  VERBOSE=1 data_sync_spsc"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="data_sync_spsc/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libdata_sync_spsc.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc/Makefile&quot;  VERBOSE=1 data_sync_spsc/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/data_sync_spsc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="modbus_master">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libmodbus_master.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master/Makefile&quot;  VERBOSE=1 modbus_master"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="modbus_master/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libmodbus_master.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master/Makefile&quot;  VERBOSE=1 modbus_master/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_master/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="modbus_slave">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libmodbus_slave.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave/Makefile&quot;  VERBOSE=1 modbus_slave"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="modbus_slave/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libmodbus_slave.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave/Makefile&quot;  VERBOSE=1 modbus_slave/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/modbus_slave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spmc_lockfree_queue">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libspmc_lockfree_queue.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue/Makefile&quot;  VERBOSE=1 spmc_lockfree_queue"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spmc_lockfree_queue/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libspmc_lockfree_queue.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue/Makefile&quot;  VERBOSE=1 spmc_lockfree_queue/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/middleware/spmc_lockfree_queue/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="log_port">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/liblog_port.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port/Makefile&quot;  VERBOSE=1 log_port"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="log_port/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/liblog_port.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port/Makefile&quot;  VERBOSE=1 log_port/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/log_port/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="atomic_test">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libatomic_test.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test/Makefile&quot;  VERBOSE=1 atomic_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="atomic_test/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libatomic_test.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test/Makefile&quot;  VERBOSE=1 atomic_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/atomic_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_data_interaction">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_data_interaction.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction/Makefile&quot;  VERBOSE=1 pvpcs_data_interaction"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_data_interaction/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_data_interaction.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction/Makefile&quot;  VERBOSE=1 pvpcs_data_interaction/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_interaction/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_hw_110kw">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_hw_110kw.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw/Makefile&quot;  VERBOSE=1 pvpcs_hw_110kw"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_hw_110kw/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_hw_110kw.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw/Makefile&quot;  VERBOSE=1 pvpcs_hw_110kw/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_110kw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_hw_150kw">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_hw_150kw.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw/Makefile&quot;  VERBOSE=1 pvpcs_hw_150kw"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_hw_150kw/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_hw_150kw.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw/Makefile&quot;  VERBOSE=1 pvpcs_hw_150kw/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_hw_150kw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_sofar_50kw">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_sofar_50kw.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw/Makefile&quot;  VERBOSE=1 pvpcs_sofar_50kw"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_sofar_50kw/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_sofar_50kw.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw/Makefile&quot;  VERBOSE=1 pvpcs_sofar_50kw/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sofar_50kw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_sungrow">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_sungrow.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow/Makefile&quot;  VERBOSE=1 pvpcs_sungrow"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_sungrow/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_sungrow.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow/Makefile&quot;  VERBOSE=1 pvpcs_sungrow/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_sungrow/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_test">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_test.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/Makefile&quot;  VERBOSE=1 pvpcs_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_test/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_test.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/Makefile&quot;  VERBOSE=1 pvpcs_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_data_map">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_data_map.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map/Makefile&quot;  VERBOSE=1 pvpcs_data_map"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pvpcs_data_map/fast">
+				<Option output="/home/three/code/new_ems/gcc/build/lib/libpvpcs_data_map.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/three/code/new_ems/gcc/external/libmodbus/include/modbus"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libzlog/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/external/libiniparser/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_master/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/middleware/modbus_slave/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/log_port/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/atomic_test/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/include"/>
+					<Add directory="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map/Makefile&quot;  VERBOSE=1 pvpcs_data_map/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/three/code/new_ems/gcc/cmake-build-debug/app/pvpcs/pvpcs_data_map/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/three/code/new_ems/gcc/app/atomic_test/atomic_test.c">
+			<Option target="atomic_test"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/log_port/log_port_zlog.c">
+			<Option target="log_port"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction/pvpcs_data_interaction.c">
+			<Option target="pvpcs_data_interaction"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction/pvpcs_data_interaction.h">
+			<Option target="pvpcs_data_interaction"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map/pvpcs_data_map.c">
+			<Option target="pvpcs_data_map"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map/pvpcs_data_map.h">
+			<Option target="pvpcs_data_map"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw/pvpcs_hw_110kw_data_protocol.c">
+			<Option target="pvpcs_hw_110kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw/pvpcs_hw_110kw_data_protocol.h">
+			<Option target="pvpcs_hw_110kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw/pvpcs_hw_110kw_external_api.c">
+			<Option target="pvpcs_hw_110kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw/pvpcs_hw_110kw_external_api.h">
+			<Option target="pvpcs_hw_110kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw/pvpcs_hw_110kw_link_api.c">
+			<Option target="pvpcs_hw_110kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw/pvpcs_hw_110kw_link_api.h">
+			<Option target="pvpcs_hw_110kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw/pvpcs_hw_150kw_data_protocol.c">
+			<Option target="pvpcs_hw_150kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw/pvpcs_hw_150kw_data_protocol.h">
+			<Option target="pvpcs_hw_150kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw/pvpcs_hw_150kw_external_api.c">
+			<Option target="pvpcs_hw_150kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw/pvpcs_hw_150kw_external_api.h">
+			<Option target="pvpcs_hw_150kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw/pvpcs_hw_150kw_link_api.c">
+			<Option target="pvpcs_hw_150kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw/pvpcs_hw_150kw_link_api.h">
+			<Option target="pvpcs_hw_150kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_rtu_communication_thread.c">
+			<Option target="pvpcs_test"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw/pvpcs_sofar_50kw_data_protocol.c">
+			<Option target="pvpcs_sofar_50kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw/pvpcs_sofar_50kw_data_protocol.h">
+			<Option target="pvpcs_sofar_50kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw/pvpcs_sofar_50kw_external_api.c">
+			<Option target="pvpcs_sofar_50kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw/pvpcs_sofar_50kw_external_api.h">
+			<Option target="pvpcs_sofar_50kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw/pvpcs_sofar_50kw_link_api.c">
+			<Option target="pvpcs_sofar_50kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw/pvpcs_sofar_50kw_link_api.h">
+			<Option target="pvpcs_sofar_50kw"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow/pvpcs_sungrow_data_protocol.c">
+			<Option target="pvpcs_sungrow"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow/pvpcs_sungrow_data_protocol.h">
+			<Option target="pvpcs_sungrow"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow/pvpcs_sungrow_external_api.c">
+			<Option target="pvpcs_sungrow"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow/pvpcs_sungrow_external_api.h">
+			<Option target="pvpcs_sungrow"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow/pvpcs_sungrow_link_api.c">
+			<Option target="pvpcs_sungrow"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow/pvpcs_sungrow_link_api.h">
+			<Option target="pvpcs_sungrow"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_tcp_communication_thread.c">
+			<Option target="pvpcs_test"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/main.c">
+			<Option target="new_ems"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/data_sync_spsc_core.c">
+			<Option target="data_sync_spsc"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/data_sync_spsc_test.c">
+			<Option target="data_sync_spsc"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/modbus_master/modbus_master_data_interaction.c">
+			<Option target="modbus_master"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/modbus_master/modbus_master_reconnect.c">
+			<Option target="modbus_master"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/modbus_master/modbus_master_rtu_init.c">
+			<Option target="modbus_master"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/modbus_master/modbus_master_tcp_init.c">
+			<Option target="modbus_master"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/modbus_slave/modbus_slave_mapping.c">
+			<Option target="modbus_slave"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/modbus_slave/modbus_slave_spmc.c">
+			<Option target="modbus_slave"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/spmc_lockfree_queue.c">
+			<Option target="spmc_lockfree_queue"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/data_sync_spsc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\middleware\data_sync_spsc\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/modbus_master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\middleware\modbus_master\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/modbus_slave/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\middleware\modbus_slave\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/middleware/spmc_lockfree_queue/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\middleware\spmc_lockfree_queue\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/log_port/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\log_port\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/atomic_test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\atomic_test\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\pvpcs\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_interaction/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\pvpcs\pvpcs_data_interaction\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_110kw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\pvpcs\pvpcs_hw_110kw\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_hw_150kw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\pvpcs\pvpcs_hw_150kw\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sofar_50kw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\pvpcs\pvpcs_sofar_50kw\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_sungrow/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\pvpcs\pvpcs_sungrow\"/>
+		</Unit>
+		<Unit filename="/home/three/code/new_ems/gcc/app/pvpcs/pvpcs_data_map/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\pvpcs\pvpcs_data_map\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

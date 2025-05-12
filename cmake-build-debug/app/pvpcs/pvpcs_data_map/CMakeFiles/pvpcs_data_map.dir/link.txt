@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../build/lib/libpvpcs_data_map.a  CMakeFiles/pvpcs_data_map.dir/pvpcs_data_map.c.o
+/usr/bin/ranlib ../../../../build/lib/libpvpcs_data_map.a

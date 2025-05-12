@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../build/lib/libspmc_lockfree_queue.a  CMakeFiles/spmc_lockfree_queue.dir/spmc_lockfree_queue.c.o
+/usr/bin/ranlib ../../../build/lib/libspmc_lockfree_queue.a

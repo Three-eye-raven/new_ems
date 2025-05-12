@@ -1,0 +1,2 @@
+aux_source_directory(. PVPCS_DATA_INTERACTION_SOURCES)
+add_library(pvpcs_data_interaction STATIC ${PVPCS_DATA_INTERACTION_SOURCES})

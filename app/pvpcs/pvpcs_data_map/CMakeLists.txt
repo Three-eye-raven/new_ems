@@ -1,0 +1,3 @@
+aux_source_directory(. PVPCS_DATA_MAP_SOURCES)
+add_library(pvpcs_data_map STATIC ${PVPCS_DATA_MAP_SOURCES})
+target_link_libraries(pvpcs_data_map pvpcs_data_interaction)
